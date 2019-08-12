@@ -5,7 +5,6 @@ export var accel : int
 export var deaccel : int
 
 var movement : = Vector2()
-var target_speed : = Vector2()
 
 func _ready():
 	pass 
@@ -13,7 +12,7 @@ func _ready():
 func _process(delta):
 	var input : = _get_directional_input()
 	_update_movement(input, delta)
-	move_and_slide(movement)
+	movement  = move_and_slide(movement)
 	pass
 
 func _get_directional_input() -> Vector2:

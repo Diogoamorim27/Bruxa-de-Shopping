@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://ItemContainer.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Sprites/interrogation mark.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/inventory_bar.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 30 )
@@ -19,7 +20,7 @@ radius = 50.0
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 500, 340 )
 script = ExtResource( 1 )
-player_speed = 200
+player_speed = 150
 accel = 10
 deaccel = 20
 
@@ -92,4 +93,19 @@ margin_top = 68.0
 margin_right = 64.0
 margin_bottom = 132.0
 texture = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="Control"]
+position = Vector2( 522, 570 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Sprite"]
+margin_left = -191.0
+margin_top = -16.0
+margin_right = 64.0
+margin_bottom = 15.0
 [connection signal="input_event" from="ItemContainer/InteractionArea" to="ItemContainer" method="_on_InteractionArea_input_event"]
