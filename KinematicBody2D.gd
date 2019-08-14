@@ -71,6 +71,7 @@ func _process(delta):
 				self.collision_layer = 1
 				self.collision_mask = 1
 		states.INTERACTING:
+			_update_movement(Vector2(),delta)
 			pass
 			
 	movement  = move_and_slide(movement)
@@ -105,3 +106,8 @@ func _update_movement(input : Vector2, delta : float):
 func _on_Timer_timeout():
 	timer_ready = true
 	
+
+
+func _on_Popup_popup_hide():
+	state = states.DEFAULT
+	pass # Replace with function body.
