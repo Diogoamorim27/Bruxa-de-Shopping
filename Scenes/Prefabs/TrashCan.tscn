@@ -11,7 +11,6 @@ extents = Vector2( 20, 10 )
 radius = 50.0
 
 [node name="TrashCan" type="StaticBody2D"]
-editor/display_folded = true
 position = Vector2( 670, 260 )
 script = ExtResource( 1 )
 
@@ -39,39 +38,4 @@ editor/display_folded = true
 position = Vector2( 0, -60 )
 scale = Vector2( 0.421875, 0.421875 )
 texture = ExtResource( 3 )
-
-[node name="Control" type="Control" parent="."]
-editor/display_folded = true
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="PopupPanel" type="PopupPanel" parent="Control"]
-margin_left = -220.0
-margin_top = -120.0
-margin_right = -80.0
-margin_bottom = 20.0
-
-[node name="GridContainer" type="GridContainer" parent="Control/PopupPanel"]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 136.0
-margin_bottom = 136.0
-columns = 2
-
-[node name="TextureRect" type="TextureRect" parent="Control/PopupPanel/GridContainer"]
-margin_right = 64.0
-margin_bottom = 64.0
-texture = ExtResource( 2 )
-
-[node name="TextureRect2" type="TextureRect" parent="Control/PopupPanel/GridContainer"]
-margin_left = 68.0
-margin_right = 132.0
-margin_bottom = 64.0
-texture = ExtResource( 2 )
-
-[node name="TextureRect3" type="TextureRect" parent="Control/PopupPanel/GridContainer"]
-margin_top = 68.0
-margin_right = 64.0
-margin_bottom = 132.0
-texture = ExtResource( 2 )
 [connection signal="input_event" from="InteractionArea" to="." method="_on_InteractionArea_input_event"]

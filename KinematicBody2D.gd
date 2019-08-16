@@ -107,7 +107,6 @@ func _on_Timer_timeout():
 	timer_ready = true
 	
 
-
 func _on_Popup_popup_hide():
 	state = states.DEFAULT
 	pass # Replace with function body.
