@@ -4,7 +4,7 @@ const ICON_PATH = "res://Assets/Sprites/Craftables/"
 
 const ITEMS = {
 	"wrinkled_paper": {
-		"icon": ICON_PATH + "paper.pgn",
+		"icon": ICON_PATH + "paper.png",
 		"category": "lightness"
 	},
 	"plastic_bottle": {
