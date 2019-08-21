@@ -2,10 +2,9 @@ extends Control
 
 const item_base = preload("res://ItemBase.tscn")
 
-onready var inv_base = $InventoryBase
-onready var strg_base = $StorageBase
-onready var crftng_base = $CraftingBase
-onready var loot_base = $TextureRect
+onready var loot_rect = $LootTextureRect
+onready var craft_rect = $CraftTextureRect
+onready var inv_rect = $InvTextureRect
 
 var item_held = null
 var item_offset = Vector2()
@@ -13,7 +12,7 @@ var last_container = null
 var last_pos = Vector2()
 
 func _ready():
-	pickup_item("plastic_bottle")
+	pickup_item("plastic_bottle", loot_rect)
 
 func _process(delta):
 	var cursor_pos = get_global_mouse_position()
@@ -41,7 +40,7 @@ func release(cursor_pos):
 	    return
 	var c = get_container_under_cursor(cursor_pos)
 	if c == null:
-	    drop_item()
+	    return_item()
 	elif c.has_method("insert_item"):
 	    if c.insert_item(item_held):
 	    	item_held = null
@@ -51,7 +50,7 @@ func release(cursor_pos):
 	    return_item()
 			
 func get_container_under_cursor(cursor_pos):
-	var containers = [loot_base, crftng_base, strg_base, inv_base]
+	var containers = [craft_rect,loot_rect, inv_rect]
 	for c in containers:
 	    if c.get_global_rect().has_point(cursor_pos):
 	    	return c
@@ -66,12 +65,12 @@ func return_item():
 	last_container.insert_item(item_held)
 	item_held = null
 	
-func pickup_item(item_id):
+func pickup_item(item_id, container):
 	var item = item_base.instance()
 	item.set_meta("id", item_id)
 	item.texture = load(ItemDB.get_item(item_id)["icon"])
 	add_child(item)
-	if !loot_base.insert_item_at_first_available_spot(item):
+	if !container.insert_item_at_first_available_spot(item):
 	    item.queue_free()
 	    return false
 	return true
