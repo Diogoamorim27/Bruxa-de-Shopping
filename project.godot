@@ -22,7 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 TextData="*res://TextData.gd"
-ItemDB="*res://ItemDB.gd"
+ItemDB="*res://Scenes/Prefabs/ItemDB.gd"
 
 [input]
 

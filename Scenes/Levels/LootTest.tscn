@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Prefabs/Inventory.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Prefabs/Trash_can_new.tscn" type="PackedScene" id=3]
+
+[node name="LootTest" type="Node2D"]
+
+[node name="Player" parent="." groups=[
+"player",
+] instance=ExtResource( 1 )]
+position = Vector2( 400, 300 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_left = 400.0
+margin_top = 300.0
+margin_right = 440.0
+margin_bottom = 340.0
+
+[node name="Inventory" parent="CanvasLayer/Control" instance=ExtResource( 2 )]
+margin_left = -400.0
+margin_top = -300.0
+margin_right = -360.0
+margin_bottom = -260.0
+
+[node name="CraftingBase" parent="CanvasLayer/Control/Inventory" index="0"]
+margin_left = 614.0
+margin_top = 470.0
+margin_right = 838.0
+margin_bottom = 566.0
+
+[node name="InventoryBase" parent="CanvasLayer/Control/Inventory" index="1"]
+margin_left = 70.0
+margin_top = 470.0
+margin_right = 550.0
+margin_bottom = 566.0
+
+[node name="CraftTextureRect" parent="CanvasLayer/Control/Inventory" index="2"]
+margin_left = 630.0
+margin_top = 486.0
+margin_right = 824.0
+margin_bottom = 550.0
+
+[node name="InvTextureRect" parent="CanvasLayer/Control/Inventory" index="3"]
+margin_left = 86.0
+margin_top = 486.0
+margin_right = 534.0
+margin_bottom = 550.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/Inventory"]
+margin_left = 848.0
+margin_top = 470.0
+margin_right = 938.0
+margin_bottom = 566.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Inventory"]
+margin_left = 860.0
+margin_top = 476.0
+margin_right = 928.0
+margin_bottom = 559.0
+
+[node name="Trashcan" parent="." instance=ExtResource( 3 )]
+position = Vector2( 620, 350 )
+items = [ "plastic_bottle", "plastic_bottle", "plastic_bottle" ]
+
+[node name="Trashcan2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 170, 350 )
+items = [ "plastic_bottle", "plastic_bottle", "plastic_bottle" ]
+[connection signal="input_event" from="Trashcan" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
+[connection signal="input_event" from="Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
+
+[editable path="CanvasLayer/Control/Inventory"]
