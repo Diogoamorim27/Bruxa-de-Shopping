@@ -16,13 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Bruxa-de-Shopping"
-run/main_scene="res://Test.tscn"
+run/main_scene="res://Scenes/Levels/LootTest.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 TextData="*res://TextData.gd"
 ItemDB="*res://Scenes/Prefabs/ItemDB.gd"
+SpellRecipes="*res://Assets/Text/SpellRecipes.tscn"
 
 [input]
 

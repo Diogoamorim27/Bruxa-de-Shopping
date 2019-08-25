@@ -83,6 +83,7 @@ func pickup_item(item_id, container):
 	var item = item_base.instance()
 	item.set_meta("id", item_id)
 	item.texture = load(ItemDB.get_item(item_id)["icon"])
+	item.item_category = ItemDB.get_item(item_id)["category"]
 	add_child(item)
 	if !container.insert_item_at_first_available_spot(item):
 		item.queue_free()
