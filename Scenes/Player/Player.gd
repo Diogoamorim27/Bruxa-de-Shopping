@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
-enum states {DEFAULT, INVISIBLE, GOO, FLOATING, INTERACTING}
+enum states {DEFAULT, INVISIBLE, GOO, FLOATING, INTERACTING, IDLE}
+const animation_states = { 0 : "Walking", 1 : "Invisible", 2: "Goo", 3 : "Floating", 4 : "Interacting", 5 : "Idle"}
+
 
 onready var timer : = $Timer
 onready var sprite : = $icon

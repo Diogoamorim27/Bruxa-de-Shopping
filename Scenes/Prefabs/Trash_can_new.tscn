@@ -13,7 +13,9 @@ height = 16.1206
 "trashcans",
 ]]
 script = ExtResource( 1 )
-items = [ null, null, null ]
+item_1 = "cola"
+item_2 = "cola"
+item_3 = "fries"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -15.6422 )

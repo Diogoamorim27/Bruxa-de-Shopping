@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="DialogPopup" type="Popup"]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1020.0
+margin_bottom = 100.0
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 50.0
+margin_bottom = 24.0
+text = "Opa!"
