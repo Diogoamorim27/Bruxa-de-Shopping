@@ -1,7 +1,7 @@
 extends Control
 
-const item_base = preload("res://Scenes/Prefabs/ItemBase.tscn")
-const loot_ui = preload("res://Scenes/Prefabs/LootUI.tscn")
+const item_base = preload("res://Scenes/Singletons/ItemBase.tscn")
+const loot_ui = preload("res://Scenes/Singletons/LootUI.tscn")
 
 onready var craft_rect = $CraftTextureRect
 onready var inv_rect = $InvTextureRect
