@@ -28,7 +28,15 @@ func insert_item(item):
         return true
     else:
         return false
- 
+
+func remove_item(item):
+	var item_pos = item.rect_global_position + Vector2(cell_size / 2, cell_size / 2)
+	var g_pos = pos_to_grid_coord(item_pos)
+	var item_size = get_grid_size(item)
+	if !is_grid_space_available(g_pos.x, g_pos.y, item_size.x, item_size.y):
+        set_grid_space(g_pos.x, g_pos.y, item_size.x, item_size.y, false)
+        items.erase(item)
+
 func grab_item(pos):
     var item = get_item_under_pos(pos)
     if item == null:

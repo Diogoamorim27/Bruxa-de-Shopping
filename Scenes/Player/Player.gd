@@ -1,11 +1,13 @@
 extends KinematicBody2D
 
-enum states {DEFAULT, INVISIBLE, GOO, FLOATING, INTERACTING, IDLE}
-const animation_states = { 0 : "Walking", 1 : "Invisible", 2: "Goo", 3 : "Floating", 4 : "Interacting", 5 : "Idle"}
+enum states {DEFAULT, INVISIBLE, GOO, FLOATING, INTERACTING}# , IDLE}
+#const animation_states = { 0 : "Walking", 1 : "Invisible", 2: "Goo", 3 : "Floating", 4 : "Interacting", 5 : "Idle"}
 
 
 onready var timer : = $Timer
 onready var sprite : = $icon
+onready var animation_player : = $AnimationPlayer
+
 export var player_speed : int
 export var accel : int
 export var deaccel : int
@@ -75,18 +77,18 @@ func _process(delta):
 		states.INTERACTING:
 			_update_movement(Vector2(),delta)
 			pass
-			
+	
+	_handle_animation()
 	movement  = move_and_slide(movement)
 	pass
 
 func _get_directional_input() -> Vector2:
 	var input : = Vector2()
-	if Input.is_action_pressed("ui_left"):
-		input.x = -1
-	elif Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right"):
 		input.x = 1
-		
-	if Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("ui_left"):
+		input.x = -1
+	elif Input.is_action_pressed("ui_up"):
 		input.y = -1
 	elif Input.is_action_pressed("ui_down"):
 		input.y = 1
@@ -101,7 +103,8 @@ func _update_movement(input : Vector2, delta : float):
 	else:
 		acceleration = deaccel
 		
-	movement = lerp(movement, target, acceleration * delta)
+#	movement = lerp(movement, target, acceleration * delta)
+	movement = target
 	pass
 	
 
@@ -112,3 +115,22 @@ func _on_Timer_timeout():
 func _on_Popup_popup_hide():
 	state = states.DEFAULT
 	pass # Replace with function body.
+	
+func _handle_animation():
+	if round(movement.x) < 0:
+		sprite.flip_h = true
+	elif round(movement.x) > 0:
+		sprite.flip_h = false
+
+	if round(movement.x) and animation_player.current_animation != "WalkingSideways":
+		animation_player.play("WalkingSideways")
+	elif round(movement.y) < 0 and animation_player.current_animation != "WalkingUp":
+		animation_player.play("WalkingUp")
+	elif round(movement.y) > 0 and animation_player.current_animation != "WalkingDown":
+		animation_player.play("WalkingDown")
+	elif !round(movement.x) and !round(movement.y) and animation_player.current_animation != "Idle":
+		animation_player.play("Idle")
+#	match state:
+#		states.DEFAULT:
+#
+	pass

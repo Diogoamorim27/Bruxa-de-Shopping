@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Prefabs/Trash_can_new.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/trashcan_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Props/objlixeiraplastico.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 60.0
 
 [sub_resource type="CapsuleShape2D" id=2]
-height = 16.1206
+height = 15.3018
 
 [node name="Trashcan" type="Area2D" groups=[
 "trashcans",
@@ -28,7 +28,6 @@ texture = ExtResource( 2 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -1.03915, 2.55065 )
 rotation = 1.57079
 scale = Vector2( 0.754903, 0.96534 )
 shape = SubResource( 2 )
