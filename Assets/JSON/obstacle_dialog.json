@@ -1,0 +1,30 @@
+{
+    "wet_floor" : [
+        "Piso molhado. Não posso correr o risco de escorregar.",
+        "Eu posso ter 17 anos, mas minha coluna tem 70…"
+    ],
+
+    "camera_fov" : [
+        "Câmeras de segurança.",
+        "Não posso ser vista aqui dentro."
+    ],
+
+    "sensor" : [
+        "ALERTA VERMELHO!",
+        "Mentira, mas é melhor não pisar nos sensores de segurança."
+    ],
+
+    "store_entrance" : [
+        "Posso sentir alguma coisa importante aí dentro...",
+        "Talvez se… eu me enfiar por baixo da porta?"
+    ],
+
+    "trashcan_opened" : ["Lixo. Nunca decepciona. Vejamos..."],
+
+    "camera_clicked" : [
+        "Claro, câmeras de segurança.",
+        "Não sou muito fotogênica nem... videogênica?",
+        "É melhor ficar invisível."
+    ]
+
+}

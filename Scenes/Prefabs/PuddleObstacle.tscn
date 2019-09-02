@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Prefabs/PuddleInteractionArea.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 20 )
@@ -21,6 +22,7 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="PuddleInteractionArea" type="Area2D" parent="."]
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuddleInteractionArea"]
 shape = SubResource( 2 )

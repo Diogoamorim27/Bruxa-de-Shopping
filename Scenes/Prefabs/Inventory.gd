@@ -6,6 +6,8 @@ const loot_ui = preload("res://Scenes/Prefabs/LootUI.tscn")
 onready var craft_rect = $CraftTextureRect
 onready var inv_rect = $InvTextureRect
 
+signal item_clicked
+
 var item_held = null
 var item_offset = Vector2()
 var last_container = null
@@ -16,6 +18,7 @@ var trashcans = []
 
 
 func _ready():
+	connect("item_clicked", get_parent().get_node("Panel"),"_on_item_clicked")
 	trashcans = get_tree().get_nodes_in_group("trashcans")
 
 func _process(delta):
@@ -27,7 +30,7 @@ func _process(delta):
 	if Input.is_action_just_released("inv_grab"):
 		if item_held:
 			if item_held.rect_global_position == last_pos:
-				print("single_mouse_click")
+				emit_signal("item_clicked", item_held.item_category)
 		release(cursor_pos)
 	
 	

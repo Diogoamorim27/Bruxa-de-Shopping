@@ -14,8 +14,9 @@ func _ready():
 	print(items)
 
 func _on_Trashcan_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		get_tree().call_group("dialogue_panel", "_trashcan_opened")
 	for body in get_overlapping_bodies():
 		if body.name == "Player":
 			if event is InputEventMouseButton:
 				current_trashcan = true
-				print("hi")
