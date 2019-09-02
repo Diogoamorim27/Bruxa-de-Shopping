@@ -14,6 +14,7 @@ var loot_open = false
 var new_loot_rect = null
 var trashcans = []
 
+
 func _ready():
 	trashcans = get_tree().get_nodes_in_group("trashcans")
 
@@ -22,11 +23,17 @@ func _process(delta):
 	if Input.is_action_just_pressed("inv_grab"):
 #		print("inv_grab")
 		grab(cursor_pos)
-	if Input.is_action_just_released("inv_grab"):
-	    release(cursor_pos)
-	if item_held != null:
-	    item_held.rect_global_position = cursor_pos + item_offset
 		
+	if Input.is_action_just_released("inv_grab"):
+		if item_held:
+			if item_held.rect_global_position == last_pos:
+				print("single_mouse_click")
+		release(cursor_pos)
+	
+	
+	if item_held != null:
+		item_held.rect_global_position = cursor_pos + item_offset
+	
 	##trahscans ##
 			
 		
@@ -137,5 +144,3 @@ func reinstance_item(item, container):
 		item.queue_free()
 		return false
 	return item	
-
-

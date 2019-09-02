@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 4 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Idle"
 length = 0.8
 loop = true
@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "WalkingDown"
 length = 0.8
 loop = true
@@ -40,8 +40,7 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "WalkingSideways"
+[sub_resource type="Animation" id=4]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -57,8 +56,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "WalkingUp"
+[sub_resource type="Animation" id=5]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -97,8 +95,8 @@ frame = 11
 wait_time = 3.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Idle = SubResource( 3 )
-anims/WalkingDown = SubResource( 5 )
-anims/WalkingSideways = SubResource( 2 )
-anims/WalkingUp = SubResource( 4 )
+anims/Idle = SubResource( 2 )
+anims/WalkingDown = SubResource( 3 )
+anims/WalkingSideways = SubResource( 4 )
+anims/WalkingUp = SubResource( 5 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

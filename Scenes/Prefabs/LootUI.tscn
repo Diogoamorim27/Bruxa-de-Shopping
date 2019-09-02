@@ -5,9 +5,9 @@
 
 [node name="LootUI" type="TextureRect"]
 self_modulate = Color( 0.329412, 0.329412, 0.329412, 1 )
-margin_left = 320.0
-margin_top = 90.0
-margin_right = 768.0
-margin_bottom = 346.0
+margin_left = 300.0
+margin_top = 170.0
+margin_right = 748.0
+margin_bottom = 426.0
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
