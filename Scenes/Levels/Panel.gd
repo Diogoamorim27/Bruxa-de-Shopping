@@ -34,6 +34,8 @@ func _on_CameraObstacle_body_entered(body):
 	_start_obstacle_dialogue("camera_fov", body)
 		
 func _on_PuddleObstacle_body_entered(body):
+	if body.name == "Player":
+		print("puddle_entered")
 	_start_obstacle_dialogue("wet_floor", body)
 	
 func _on_DoorObstacle_body_entered(body):
@@ -53,5 +55,6 @@ func _trashcan_opened():
 	
 func _camera_clicked():
 	_start_obstacle_dialogue("camera_clicked", player)
+	
 	
 	

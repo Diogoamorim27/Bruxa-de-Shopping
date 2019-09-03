@@ -442,7 +442,7 @@ tile_data = PoolIntArray( -6094863, 3, 0, -6029332, 2, 0, -5570578, 2, 0, -43253
 
 [node name="Trashcan" parent="Trashcans" instance=ExtResource( 14 )]
 position = Vector2( 940, 0 )
-item_1 = "batata"
+item_1 = "banana"
 item_2 = "burg"
 item_3 = "lata1"
 
@@ -467,7 +467,7 @@ position = Vector2( 170, -100 )
 position = Vector2( 1260, -1930 )
 
 [node name="Player" parent="." instance=ExtResource( 18 )]
-position = Vector2( 570, -470 )
+position = Vector2( 320, -15.6422 )
 z_index = 2
 player_speed = 155
 
