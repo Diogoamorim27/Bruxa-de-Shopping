@@ -1,7 +1,7 @@
 extends Area2D
-export (String, "wrinkled_paper", "plastic_bottle", "cola", "fries") var item_1
-export (String, "wrinkled_paper", "plastic_bottle", "cola", "fries") var item_2
-export (String, "wrinkled_paper", "plastic_bottle", "cola", "fries") var item_3
+export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca") var item_1
+export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca") var item_2
+export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca") var item_3
 var items : = []
 
 var item_rects : = []

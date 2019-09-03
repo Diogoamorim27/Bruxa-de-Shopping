@@ -20,11 +20,12 @@ func _process(delta):
 
 
 func _on_Button_pressed():
-	print("hi")
-	for item in crafting_items.items:
-		
-		item.queue_free()
-		crafting_items.remove_item(item)
+	while !crafting_items.items.empty():
+		for item in crafting_items.items:
+			crafting_items.remove_item(item)
+			item.queue_free()
+
+#	print(crafting_items.items)
 
 	if _check_ingredients():
 		player.timer_ready = false

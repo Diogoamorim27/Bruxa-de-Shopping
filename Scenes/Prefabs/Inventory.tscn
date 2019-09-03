@@ -25,7 +25,7 @@ margin_bottom = 556.0
 [node name="CraftingBase" type="Panel" parent="."]
 margin_left = 680.0
 margin_top = 470.0
-margin_right = 904.0
+margin_right = 910.0
 margin_bottom = 566.0
 
 [node name="CraftTextureRect" type="TextureRect" parent="." groups=[
@@ -34,7 +34,7 @@ margin_bottom = 566.0
 self_modulate = Color( 0.329412, 0.329412, 0.329412, 1 )
 margin_left = 700.0
 margin_top = 486.0
-margin_right = 894.0
+margin_right = 892.0
 margin_bottom = 550.0
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
