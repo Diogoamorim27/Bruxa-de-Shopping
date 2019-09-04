@@ -30,7 +30,7 @@ func _on_Button_pressed():
 	if _check_ingredients():
 		player.timer_ready = false
 		player.timer.start()
-		player.state = spell_indexes[_check_ingredients()]
+		player.enter_state(spell_indexes[_check_ingredients()])
 		print(_check_ingredients())
 		print(spell_indexes[_check_ingredients()])
 					

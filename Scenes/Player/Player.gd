@@ -28,7 +28,7 @@ func _process(delta):
 			
 			#PROVISORY SPELLS ACTIVATION#
 			if Input.is_action_just_pressed("numkey_1"):
-				_enter_state(states.INVISIBLE)
+				enter_state(states.INVISIBLE)
 			if Input.is_action_just_pressed("numkey_2"):
 				timer_ready = false
 				timer.start()
@@ -134,7 +134,7 @@ func _handle_animation():
 #
 	pass
 
-func _enter_state(new_state):
+func enter_state(new_state):
 	timer_ready = false
 	timer.start()
 	state = new_state
