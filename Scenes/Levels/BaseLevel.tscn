@@ -462,6 +462,26 @@ item_3 = "lata2"
 [node name="CameraObstacle" parent="." instance=ExtResource( 15 )]
 position = Vector2( 480, -630 )
 
+[node name="CameraInteractionArea" parent="CameraObstacle" index="0"]
+position = Vector2( 180, -20 )
+rotation = 1.0472
+
+[node name="CameraInteractionArea2" parent="CameraObstacle" index="1"]
+position = Vector2( -170, -20 )
+rotation = -1.0472
+
+[node name="StaticBody2D" parent="CameraObstacle" index="3"]
+position = Vector2( -10, 0 )
+
+[node name="CollisionShape2D" parent="CameraObstacle/StaticBody2D" index="0"]
+position = Vector2( 10, 40 )
+
+[node name="Area2D" parent="CameraObstacle/StaticBody2D" index="1"]
+position = Vector2( -10, 0 )
+
+[node name="CollisionShape2D" parent="CameraObstacle/StaticBody2D/Area2D" index="0"]
+position = Vector2( 20, 40 )
+
 [node name="PuddleObstacle" parent="." instance=ExtResource( 16 )]
 position = Vector2( 170, -5 )
 
@@ -472,7 +492,7 @@ position = Vector2( 170, -100 )
 position = Vector2( 1260, -1930 )
 
 [node name="Player" parent="." instance=ExtResource( 18 )]
-position = Vector2( 490, 380 )
+position = Vector2( 360, -490 )
 z_index = 2
 player_speed = 155
 
@@ -495,3 +515,5 @@ editor_draw_drag_margin = true
 [editable path="CanvasLayer/Control/Panel"]
 
 [editable path="CanvasLayer/Control/Inventory"]
+
+[editable path="CameraObstacle"]
