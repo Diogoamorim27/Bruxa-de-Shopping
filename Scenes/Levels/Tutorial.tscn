@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Levels/Tutorial.gd" type="Script" id=1]
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 180.0
+margin_top = 10.0
+margin_right = 530.0
+margin_bottom = 262.0
+rect_scale = Vector2( 2, 2 )
+text = "CONTROLES
+
+Aperte as teclas W, A, S, D para se mover.
+
+Use o mouse para clicar e interagir com objetos do cenário, como latas de lixo.
+
+Clique, arraste e solte itens no seu inventário.
+
+Para combinar os itens e fazer mágica, arraste-os para as caixas do lado direito e clique no botão de confirmação.
+
+Boa bruxaria!
+"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 510.0
+margin_right = 610.0
+margin_bottom = 530.0
+text = "jogar"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
