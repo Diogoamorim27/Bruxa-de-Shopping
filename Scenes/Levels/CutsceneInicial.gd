@@ -58,6 +58,7 @@ func _on_CutsceneInicial_gui_input(event):
 func _on_AnimationPlayer_animation_finished(anim_name):
 		dialogue_index = 0
 		current_text = TEXTO_2
+		label.visible = true
 	
 
 

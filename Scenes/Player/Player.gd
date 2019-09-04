@@ -7,6 +7,7 @@ enum states {DEFAULT, INVISIBLE, GOO, FLOATING, INTERACTING}# , IDLE}
 onready var timer : = $Timer
 onready var sprite : = $icon
 onready var animation_player : = $AnimationPlayer
+onready var opacity_animator : = $OpacityAnimator
 
 export var player_speed : int
 export var accel : int
@@ -30,6 +31,7 @@ func _process(delta):
 				timer_ready = false
 				timer.start()
 				state = states.INVISIBLE
+				opacity_animator.play("GoInvisible")
 			if Input.is_action_just_pressed("numkey_2"):
 				timer_ready = false
 				timer.start()
@@ -42,14 +44,13 @@ func _process(delta):
 			
 			
 		states.INVISIBLE:
-			sprite.modulate = Color(1, 0, 0)
 			_update_movement(input, delta)
 			self.collision_layer = 2
 			self.collision_mask = 2
+
 			# POWER OVER #
 			if timer_ready == true:
 				state = states.DEFAULT
-				$icon.modulate = Color(1 ,1, 1)
 				self.collision_layer = 1
 				self.collision_mask = 1
 		states.GOO:
@@ -134,3 +135,10 @@ func _handle_animation():
 #		states.DEFAULT:
 #
 	pass
+
+func _enter_state(state):
+	timer_ready = false
+	timer.start()
+	state = states.INVISIBLE
+	opacity_animator.play("GoInvisible")
+	
