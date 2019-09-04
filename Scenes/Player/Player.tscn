@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/player.png" type="Texture" id=2]
@@ -73,7 +73,9 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-resource_name = "GoInvisible"
+resource_name = "GoBack"
+
+[sub_resource type="Animation" id=7]
 length = 0.5
 step = 0.5
 tracks/0/type = "value"
@@ -121,5 +123,6 @@ anims/WalkingSideways = SubResource( 4 )
 anims/WalkingUp = SubResource( 5 )
 
 [node name="OpacityAnimator" type="AnimationPlayer" parent="."]
-anims/GoInvisible = SubResource( 6 )
+anims/GoBack = SubResource( 6 )
+anims/GoInvisible = SubResource( 7 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

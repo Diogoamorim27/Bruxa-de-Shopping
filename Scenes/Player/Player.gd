@@ -28,10 +28,7 @@ func _process(delta):
 			
 			#PROVISORY SPELLS ACTIVATION#
 			if Input.is_action_just_pressed("numkey_1"):
-				timer_ready = false
-				timer.start()
-				state = states.INVISIBLE
-				opacity_animator.play("GoInvisible")
+				_enter_state(states.INVISIBLE)
 			if Input.is_action_just_pressed("numkey_2"):
 				timer_ready = false
 				timer.start()
@@ -50,6 +47,7 @@ func _process(delta):
 
 			# POWER OVER #
 			if timer_ready == true:
+				opacity_animator.play_backwards("GoInvisible")
 				state = states.DEFAULT
 				self.collision_layer = 1
 				self.collision_mask = 1
@@ -136,9 +134,10 @@ func _handle_animation():
 #
 	pass
 
-func _enter_state(state):
+func _enter_state(new_state):
 	timer_ready = false
 	timer.start()
-	state = states.INVISIBLE
-	opacity_animator.play("GoInvisible")
+	state = new_state
+	if new_state == states.INVISIBLE:
+		opacity_animator.play("GoInvisible")
 	
