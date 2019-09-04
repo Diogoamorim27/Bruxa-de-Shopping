@@ -20,10 +20,10 @@ func _process(delta):
 
 
 func _on_Button_pressed():
-	while !crafting_items.items.empty():
-		for item in crafting_items.items:
-			crafting_items.remove_item(item)
-			item.queue_free()
+#	while !crafting_items.items.empty():
+#			for item in crafting_items.items:
+#				crafting_items.remove_item(item)
+#				item.queue_free()
 
 #	print(crafting_items.items)
 
@@ -33,6 +33,11 @@ func _on_Button_pressed():
 		player.enter_state(spell_indexes[_check_ingredients()])
 		print(_check_ingredients())
 		print(spell_indexes[_check_ingredients()])
+		
+		while !crafting_items.items.empty():
+			for item in crafting_items.items:
+				crafting_items.remove_item(item)
+				item.queue_free()
 					
 func _check_ingredients():
 	for spell in SpellRecipes.SPELLS.keys():
