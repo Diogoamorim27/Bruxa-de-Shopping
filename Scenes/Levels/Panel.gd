@@ -8,6 +8,7 @@ enum {ITEM_DESCRIPTION, OBSTACLE_DIALOG}
 var dialogue_type : int
 var dialogue_index : = 0
 var current_dialogue : Array
+var cam_triggered= false
 
 func _ready():
 	pass # Replace with function body.
@@ -53,8 +54,9 @@ func _start_obstacle_dialogue(obstacle : String, body : Object):
 func _trashcan_opened():
 	_start_obstacle_dialogue("trashcan_opened", player)
 	
-func _camera_clicked():
-	_start_obstacle_dialogue("camera_clicked", player)
-	
-	
-	
+
+func _on_CameraDialogTrigger_body_entered(body):
+	if !cam_triggered:
+		_start_obstacle_dialogue("camera_warning", player)
+		cam_triggered = true
+	pass # Replace with function body.

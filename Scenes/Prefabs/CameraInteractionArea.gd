@@ -10,7 +10,7 @@ func _ready():
 		connect("body_entered", get_tree().get_nodes_in_group("dialogue_panel")[0], "_on_CameraObstacle_body_entered")
 
 func _on_CameraInteractionArea_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed:
-		print("camera_clicked")
-		get_tree().call_group("dialogue_panel", "_camera_clicked")
+#	if event is InputEventMouseButton and event.pressed:
+#		print("camera_clicked")
+#		get_tree().call_group("dialogue_panel", "_camera_clicked")
 	pass # Replace with function body.

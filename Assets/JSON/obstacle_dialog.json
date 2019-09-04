@@ -21,10 +21,11 @@
 
     "trashcan_opened" : ["Lixo. Nunca decepciona. Vejamos..."],
 
-    "camera_clicked" : [
+    "camera_warning" : [
         "Claro, câmeras de segurança.",
         "Não sou muito fotogênica nem... videogênica?",
-        "É melhor ficar invisível."
+        "É melhor ficar invisível.",
+        "Devo encontrar os itens necessários no lixo."
     ],
 
     "starting_dialog" : [
