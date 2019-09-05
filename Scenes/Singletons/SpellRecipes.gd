@@ -11,6 +11,11 @@ const SPELLS = {
 	"floating" : {
 		"lightness" : 1,
 		"soda" : 2
+	},
+	"overpower" : {
+		"bota" : 1,
+		"cobra" : 1,
+		"controle" : 1
 	}
 }
 

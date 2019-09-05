@@ -1,7 +1,7 @@
 extends Area2D
-export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca") var item_1
-export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca") var item_2
-export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca") var item_3
+export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca", "bota", "brinq-carreta", "brinq-cobrinha", "brinq-urso", "chinelo", "salto", "tech-controle", "tech-headphone", "tech-lamp") var item_1
+export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca", "bota", "brinq-carreta", "brinq-cobrinha", "brinq-urso", "chinelo", "salto", "tech-controle", "tech-headphone", "tech-lamp") var item_2
+export (String, "banana", "burg", "batata", "copo", "garrafa", "lata1", "lata2", "maca", "papel1", "papel2", "pizza", "meleca", "bota", "brinq-carreta", "brinq-cobrinha", "brinq-urso", "chinelo", "salto", "tech-controle", "tech-headphone", "tech-lamp") var item_3
 var items : = []
 
 var item_rects : = []

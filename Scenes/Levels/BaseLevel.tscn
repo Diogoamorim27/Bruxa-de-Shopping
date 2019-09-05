@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://Scenes/Levels/BaseLevel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Prefabs/Crafting.tscn" type="PackedScene" id=2]
@@ -50,11 +50,13 @@
 [ext_resource path="res://Scenes/Prefabs/lixopraca.tscn" type="PackedScene" id=48]
 [ext_resource path="res://Scenes/Prefabs/lixopracalado2.tscn" type="PackedScene" id=49]
 [ext_resource path="res://Scenes/Prefabs/lixopracalado.tscn" type="PackedScene" id=50]
-[ext_resource path="res://Scenes/Prefabs/CameraObstacle.tscn" type="PackedScene" id=51]
-[ext_resource path="res://Assets/Sprites/light_example.png" type="Texture" id=52]
-[ext_resource path="res://Scenes/Prefabs/PuddleObstacle.tscn" type="PackedScene" id=53]
-[ext_resource path="res://Scenes/Prefabs/DoorObstacle.tscn" type="PackedScene" id=54]
-[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Scenes/Prefabs/estante_sapato.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Scenes/Prefabs/estante_brinquedo.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Scenes/Prefabs/CameraObstacle.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Assets/Sprites/light_example.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Prefabs/PuddleObstacle.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Scenes/Prefabs/DoorObstacle.tscn" type="PackedScene" id=56]
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=57]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1110,10 +1112,9 @@ tile_data = PoolIntArray( -5046303, 13, 0, -4718632, 5, 0, -4718614, 7, 0, -4194
 tile_set = SubResource( 57 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -10354612, 20, 0, -10092472, 18, 0, -9961403, 14, 0, -9961397, 21, 0, -9961386, 15, 0, -9830317, 14, 0, -9633723, 17, 0, -9633708, 16, 0, -9306043, 16, 0, -9306028, 17, 0, -9043882, 15, 0, -8454076, 4, 0, -8454059, 4, 0, -8192031, 8, 0, -8192025, 8, 0, -7995423, 8, 0, -7995417, 8, 0, -7798815, 8, 0, -7798809, 8, 0, -7733205, 23, 0, -7602227, 7, 0, -7602223, 7, 0, -7602219, 7, 0, -7602215, 7, 0, -7602207, 8, 0, -7602201, 8, 0, -7602191, 7, 0, -7602187, 7, 0, -7602183, 7, 0, -7602179, 7, 0, -7667657, 1, 0, -7536674, 2, 0, -7471140, 2, 0, -7340084, 4, 0, -7340033, 4, 0, -7405525, 5, 0, -7405513, 1, 0, -7143460, 4, 0, -7143443, 4, 0, -6750139, 3, 0, -6750124, 3, 0, -6619172, 1, 0, -6619155, 1, 0, -6094867, 2, 0, -6029327, 3, 0, -6094778, 3, 0, -6094765, 3, 0, -5636117, 2, 0, -5636091, 22, 0, -5505010, 26, 0, -5504921, 13, 0, -5504906, 11, 0, -5439380, 10, 0, -5439375, 10, 0, -5373947, 23, 0, -5373942, 24, 0, -5177329, 1, 0, -5177226, 12, 0, -5046268, 1, 0, -4980722, 25, 0, -4980633, 9, 0, -4325408, 4, 0, -4325389, 4, 0, -4390911, 4, 0, -4390827, 4, 0, -4390811, 4, 0, -4390793, 4, 0, -4259868, 0, 0, -4259856, 0, 0, -4325358, 0, 0, -4325336, 4, 0, -3997727, 1, 0, -3997723, 5, 0, -3997713, 5, 0, -3866571, 4, 0, -3866552, 4, 0, -3866539, 4, 0, -3866523, 4, 0, -3866505, 4, 0, -3670038, 0, 0, -3407854, 1, 0, -3407833, 1, 0, -2490368, 4, 0, -2424774, 4, 0, -1900516, 0, 0, -1310720, 1, 0, -1310663, 1, 0, -655347, 4, 0, -655314, 4, 0, -589807, 0, 0, -589785, 0, 0, -327670, 2, 0, 65554, 3, 0, 65575, 3, 0, 1376274, 3, 0, 1376295, 3, 0 )
+tile_data = PoolIntArray( -10354612, 20, 0, -10092472, 18, 0, -9961403, 14, 0, -9961397, 21, 0, -9961386, 15, 0, -9830317, 14, 0, -9633723, 17, 0, -9633708, 16, 0, -9306043, 16, 0, -9306028, 17, 0, -9043882, 15, 0, -8454076, 4, 0, -8454059, 4, 0, -8192031, 8, 0, -8192025, 8, 0, -7995423, 8, 0, -7995417, 8, 0, -7798815, 8, 0, -7798809, 8, 0, -7733205, 23, 0, -7602227, 7, 0, -7602223, 7, 0, -7602219, 7, 0, -7602215, 7, 0, -7602207, 8, 0, -7602201, 8, 0, -7602191, 7, 0, -7602187, 7, 0, -7602183, 7, 0, -7602179, 7, 0, -7667657, 1, 0, -7536674, 2, 0, -7471140, 2, 0, -7340084, 4, 0, -7340033, 4, 0, -7405525, 5, 0, -7405513, 1, 0, -7143460, 4, 0, -7143443, 4, 0, -6750139, 3, 0, -6750124, 3, 0, -6619172, 1, 0, -6619155, 1, 0, -6094867, 2, 0, -6029327, 3, 0, -6094778, 3, 0, -6094765, 3, 0, -5636117, 2, 0, -5636091, 22, 0, -5504906, 11, 0, -5439380, 10, 0, -5439375, 10, 0, -5373947, 23, 0, -5373942, 24, 0, -5177329, 1, 0, -5177226, 12, 0, -5046268, 1, 0, -4980722, 25, 0, -4980633, 9, 0, -4325408, 4, 0, -4325389, 4, 0, -4390911, 4, 0, -4390827, 4, 0, -4390811, 4, 0, -4390793, 4, 0, -4259868, 0, 0, -4259856, 0, 0, -4325358, 0, 0, -4325336, 4, 0, -3997727, 1, 0, -3997723, 5, 0, -3997713, 5, 0, -3866571, 4, 0, -3866552, 4, 0, -3866539, 4, 0, -3866523, 4, 0, -3866505, 4, 0, -3670038, 0, 0, -3407854, 1, 0, -3407833, 1, 0, -2490368, 4, 0, -2424774, 4, 0, -1900516, 0, 0, -1310720, 1, 0, -1310663, 1, 0, -655347, 4, 0, -655314, 4, 0, -589807, 0, 0, -589785, 0, 0, -327670, 2, 0, 65554, 3, 0, 65575, 3, 0, 1376274, 3, 0, 1376295, 3, 0 )
 
 [node name="Trashcans" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Tcan" parent="Trashcans" instance=ExtResource( 46 )]
 position = Vector2( 940, 0 )
@@ -1157,6 +1158,18 @@ item_1 = "maca"
 item_2 = "maca"
 item_3 = "banana"
 
+[node name="estante_sapato" parent="Trashcans" instance=ExtResource( 51 )]
+position = Vector2( 260, -1284 )
+item_1 = "bota"
+item_2 = "chinelo"
+item_3 = "salto"
+
+[node name="estante_brinquedo" parent="Trashcans" instance=ExtResource( 52 )]
+position = Vector2( 1684, -1260 )
+item_1 = "brinq-carreta"
+item_2 = "brinq-cobrinha"
+item_3 = "brinq-urso"
+
 [node name="CameraDialogTrigger" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 670, -510 )
@@ -1165,7 +1178,7 @@ position = Vector2( 670, -510 )
 position = Vector2( 0, 10 )
 shape = SubResource( 58 )
 
-[node name="CameraObstacle" parent="." instance=ExtResource( 51 )]
+[node name="CameraObstacle" parent="." instance=ExtResource( 53 )]
 editor/display_folded = true
 position = Vector2( 480, -630 )
 
@@ -1192,7 +1205,7 @@ position = Vector2( 20, 40 )
 [node name="Light2D" type="Light2D" parent="CameraObstacle"]
 position = Vector2( -88.9998, -28.9998 )
 scale = Vector2( 0.275391, 0.275391 )
-texture = ExtResource( 52 )
+texture = ExtResource( 54 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1200,22 +1213,22 @@ __meta__ = {
 [node name="Light2D2" type="Light2D" parent="CameraObstacle"]
 position = Vector2( 111, -28.9998 )
 scale = Vector2( 0.275391, 0.275391 )
-texture = ExtResource( 52 )
+texture = ExtResource( 54 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PuddleObstacle" parent="." instance=ExtResource( 53 )]
+[node name="PuddleObstacle" parent="." instance=ExtResource( 55 )]
 position = Vector2( 170, -5 )
 
-[node name="PuddleObstacle2" parent="." instance=ExtResource( 53 )]
+[node name="PuddleObstacle2" parent="." instance=ExtResource( 55 )]
 position = Vector2( 170, -100 )
 
-[node name="DoorObstacle" parent="." instance=ExtResource( 54 )]
+[node name="DoorObstacle" parent="." instance=ExtResource( 56 )]
 position = Vector2( 1260, -1930 )
 
-[node name="Player" parent="." instance=ExtResource( 55 )]
-position = Vector2( 490, 390 )
+[node name="Player" parent="." instance=ExtResource( 57 )]
+position = Vector2( 1780, -1192 )
 z_index = 2
 player_speed = 155
 
@@ -1232,7 +1245,7 @@ editor_draw_drag_margin = true
 [node name="Light2D" type="Light2D" parent="Player"]
 position = Vector2( -3.05176e-005, -30 )
 scale = Vector2( 0.371094, 0.371094 )
-texture = ExtResource( 52 )
+texture = ExtResource( 54 )
 texture_scale = 2.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -1251,6 +1264,8 @@ color = Color( 0.113725, 0.113725, 0.113725, 1 )
 [connection signal="input_event" from="Trashcans/Trashcan4" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan5" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan6" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
+[connection signal="input_event" from="Trashcans/estante_sapato" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
+[connection signal="input_event" from="Trashcans/estante_brinquedo" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="body_entered" from="CameraDialogTrigger" to="CanvasLayer/Control/Panel" method="_on_CameraDialogTrigger_body_entered"]
 
 [editable path="CanvasLayer/Control/Panel"]

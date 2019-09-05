@@ -50,6 +50,53 @@ const ITEMS = {
 	"meleca": {
 		"icon": ICON_PATH + "meleca.png",
 		"category" : "grease"
+	},
+	
+	#special items#
+	
+	"bota": {
+		"icon": ICON_PATH + "bota.png",
+		"category" : "bota"
+	},
+
+	"brinq-carreta" : {
+		"icon": ICON_PATH + "brinq-carreta.png",
+		"category" : "special"
+	},
+
+	"brinq-cobrinha": {
+		"icon": ICON_PATH + "brinq-cobrinha.png",
+		"category" : "cobra"
+	},
+
+	"brinq-urso": {
+		"icon": ICON_PATH + "brinq-urso.png",
+		"category" : "special"
+	},
+
+	"chinelo": {
+		"icon": ICON_PATH + "chinelo.png",
+		"category" : "special"
+	},
+
+	"salto": {
+		"icon": ICON_PATH + "salto.png",
+		"category" : "special"
+	},
+
+	"tech-controle": {
+		"icon": ICON_PATH + "tech-controle.png",
+		"category" : "controle"
+	},
+
+	"tech-headphone": {
+		"icon": ICON_PATH + "tech-headpohe.png",
+		"category" : "special"
+	},
+
+	"tech-lamp": {
+		"icon": ICON_PATH + "tech-lamp.png",
+		"category" : "special"
 	}
 
 }
@@ -60,7 +107,11 @@ const ITEM_DESCRIPTIONS = {
 	"soda" : "Lata de refrigerante. Posso sentir um passado gasoso aqui dentro...",
 	"grease": "Delícia! Comida gordurosa com altos níveis de oleosidade. Pode ser útil.",
 	"transparency" : "Plástico transparente, do tipo que engasga tartarugas...",
-	"healthy" : "Não serve. Isso é pra galera fitness."
+	"healthy" : "Não serve. Isso é pra galera fitness.",
+	"special" : "",
+	"bota" : "",
+	"cobra" : "",
+	"controle": ""
 	}
 
 func get_item(item_id):
