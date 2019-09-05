@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Scenes/Levels/BaseLevel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Prefabs/Crafting.tscn" type="PackedScene" id=2]
@@ -16,16 +16,19 @@
 [ext_resource path="res://Assets/Sprites/Props/objvaso1.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Sprites/Props/vaso2.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Sprites/Props/objmesa.png" type="Texture" id=16]
-[ext_resource path="res://Scenes/Prefabs/Trash_can_new.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/Prefabs/lixopraca2.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scenes/Prefabs/lixopraca.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/Prefabs/lixopracalado2.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/Prefabs/lixopracalado.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/Prefabs/CameraObstacle.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Assets/Sprites/light_example.png" type="Texture" id=23]
-[ext_resource path="res://Scenes/Prefabs/PuddleObstacle.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Scenes/Prefabs/DoorObstacle.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Assets/Sprites/Props/mesapraca3.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Sprites/Props/mesa praca2.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Sprites/Props/mesapraca1.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Prefabs/Trash_can_new.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Prefabs/lixopraca2.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Prefabs/lixopraca.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Prefabs/lixopracalado2.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Prefabs/lixopracalado.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Prefabs/CameraObstacle.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Assets/Sprites/light_example.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Prefabs/PuddleObstacle.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Prefabs/DoorObstacle.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=29]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -380,7 +383,16 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 [sub_resource type="ConvexPolygonShape2D" id=30]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[sub_resource type="TileSet" id=31]
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 51.3979, 0, 51.3979, 22.3735, 60.6077, 21.5362, 63, 76.2362, 1.16327, 76.7944, 2.00052, 26.8388, 18.1872, 25.4434, 27.1179, 0.0469437 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 32.4204, 0.326019, 31.8622, 23.4898, 44.1418, 24.8852, 45.2582, 60.8867, 35.4903, 93.5393, 7.86122, 92.9811, 3.11684, 76.5153, 0, 62.5612, 0.605103, 23.2107, 9.25664, 23.2107, 8.97755, 1.72143 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.701, 7.58215, 77.3525, 6.46582, 77.9107, 53.6306, 1.16327, 53.3515 )
+
+[sub_resource type="TileSet" id=34]
 0/name = "objbanco.png 0"
 0/texture = ExtResource( 11 )
 0/tex_offset = Vector2( 0, 0 )
@@ -507,11 +519,59 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
+6/name = "mesapraca3.png 6"
+6/texture = ExtResource( 17 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 63, 77 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 31 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "mesa praca2.png 7"
+7/texture = ExtResource( 18 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 64, 128 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "mesapraca1.png 8"
+8/texture = ExtResource( 19 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( -1, 0, 81, 57 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 33 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=32]
+[sub_resource type="RectangleShape2D" id=35]
 extents = Vector2( 20, 60 )
 
-[sub_resource type="Environment" id=33]
+[sub_resource type="Environment" id=36]
 
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource( 1 )
@@ -552,50 +612,50 @@ format = 1
 tile_data = PoolIntArray( -4718632, 5, 0, -4718614, 7, 0, -4194297, 2, 0, -3801109, 1, 0, -2949147, 10, 0, -2949133, 9, 0, -3014627, 0, 0, -2031630, 11, 0, -2097144, 6, 0, -1114115, 8, 0 )
 
 [node name="Props" type="TileMap" parent="."]
-tile_set = SubResource( 31 )
+tile_set = SubResource( 34 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -6094867, 2, 0, -6094863, 3, 0, -5636117, 2, 0, -4325374, 4, 0, -4325360, 4, 0, -4325354, 4, 0, -4325336, 4, 0, -4194336, 4, 0, -4194332, 0, 0, -4194320, 0, 0, -4259821, 0, 0, -3997727, 1, 0, -3801120, 4, 0, -3866571, 4, 0, -3670038, 0, 0, -2490368, 4, 0, -2424774, 4, 0, -1900516, 0, 0, -1310720, 1, 0, -1310663, 1, 0, -655347, 4, 0, -655314, 4, 0, -589807, 0, 0, -589785, 0, 0, -327670, 2, 0, 65554, 3, 0, 65575, 3, 0, 1376274, 3, 0, 1376295, 3, 0 )
 
 [node name="Trashcans" type="Node" parent="."]
 
-[node name="Tcan" parent="Trashcans" instance=ExtResource( 17 )]
+[node name="Tcan" parent="Trashcans" instance=ExtResource( 20 )]
 position = Vector2( 940, 0 )
 item_1 = "garrafa"
 item_2 = "papel1"
 item_3 = "papel2"
 
-[node name="Trashcan2" parent="Trashcans" instance=ExtResource( 17 )]
+[node name="Trashcan2" parent="Trashcans" instance=ExtResource( 20 )]
 position = Vector2( 30, -5 )
 item_1 = "garrafa"
 item_2 = "copo"
 item_3 = "papel1"
 
-[node name="Trashcan3" parent="Trashcans" instance=ExtResource( 17 )]
+[node name="Trashcan3" parent="Trashcans" instance=ExtResource( 20 )]
 position = Vector2( -20, -1460 )
 item_1 = "copo"
 item_2 = "lata1"
 item_3 = "lata2"
 
-[node name="Trashcan" parent="Trashcans" instance=ExtResource( 18 )]
+[node name="Trashcan" parent="Trashcans" instance=ExtResource( 21 )]
 position = Vector2( 300, -40 )
 item_1 = "maca"
 item_2 = "copo"
 item_3 = "papel2"
 
-[node name="Trashcan4" parent="Trashcans" instance=ExtResource( 19 )]
+[node name="Trashcan4" parent="Trashcans" instance=ExtResource( 22 )]
 position = Vector2( 620, -55 )
 item_1 = "burg"
 item_2 = "maca"
 item_3 = "maca"
 
-[node name="Trashcan5" parent="Trashcans" instance=ExtResource( 20 )]
+[node name="Trashcan5" parent="Trashcans" instance=ExtResource( 23 )]
 position = Vector2( 410, -40 )
 item_1 = "lata2"
 item_2 = "burg"
 item_3 = "garrafa"
 
-[node name="Trashcan6" parent="Trashcans" instance=ExtResource( 21 )]
+[node name="Trashcan6" parent="Trashcans" instance=ExtResource( 24 )]
 position = Vector2( 518, -50 )
 item_1 = "copo"
 item_2 = "papel1"
@@ -607,9 +667,9 @@ position = Vector2( 670, -510 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraDialogTrigger"]
 position = Vector2( 0, 10 )
-shape = SubResource( 32 )
+shape = SubResource( 35 )
 
-[node name="CameraObstacle" parent="." instance=ExtResource( 22 )]
+[node name="CameraObstacle" parent="." instance=ExtResource( 25 )]
 editor/display_folded = true
 position = Vector2( 480, -630 )
 
@@ -636,7 +696,7 @@ position = Vector2( 20, 40 )
 [node name="Light2D" type="Light2D" parent="CameraObstacle"]
 position = Vector2( -88.9998, -28.9998 )
 scale = Vector2( 0.275391, 0.275391 )
-texture = ExtResource( 23 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -644,21 +704,21 @@ __meta__ = {
 [node name="Light2D2" type="Light2D" parent="CameraObstacle"]
 position = Vector2( 111, -28.9998 )
 scale = Vector2( 0.275391, 0.275391 )
-texture = ExtResource( 23 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PuddleObstacle" parent="." instance=ExtResource( 24 )]
+[node name="PuddleObstacle" parent="." instance=ExtResource( 27 )]
 position = Vector2( 170, -5 )
 
-[node name="PuddleObstacle2" parent="." instance=ExtResource( 24 )]
+[node name="PuddleObstacle2" parent="." instance=ExtResource( 27 )]
 position = Vector2( 170, -100 )
 
-[node name="DoorObstacle" parent="." instance=ExtResource( 25 )]
+[node name="DoorObstacle" parent="." instance=ExtResource( 28 )]
 position = Vector2( 1260, -1930 )
 
-[node name="Player" parent="." instance=ExtResource( 26 )]
+[node name="Player" parent="." instance=ExtResource( 29 )]
 position = Vector2( 490, 390 )
 z_index = 2
 player_speed = 155
@@ -676,11 +736,11 @@ editor_draw_drag_margin = true
 [node name="Light2D" type="Light2D" parent="Player"]
 position = Vector2( -3.05176e-005, -30 )
 scale = Vector2( 0.371094, 0.371094 )
-texture = ExtResource( 23 )
+texture = ExtResource( 26 )
 texture_scale = 2.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 33 )
+environment = SubResource( 36 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="WorldEnvironment"]
 visible = false
