@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Prefabs/Trash_can_new.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Lixos/lixo-praça-lado2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/interrogation mark.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 60.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21.1948, 16.5745 )
+
+[node name="Trashcan" type="Area2D" groups=[
+"trashcans",
+]]
+script = ExtResource( 1 )
+item_1 = "cola"
+item_2 = "cola"
+item_3 = "fries"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -15.6422 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -20 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -3.63798e-012, -4 )
+rotation = 1.57079
+scale = Vector2( 0.754903, 0.96534 )
+shape = SubResource( 2 )
+
+[node name="AttentionSprite" type="Sprite" parent="."]
+position = Vector2( -3.8147e-006, -76 )
+scale = Vector2( 0.40625, 0.40625 )
+texture = ExtResource( 3 )
+[connection signal="input_event" from="." to="." method="_on_Trashcan_input_event"]
