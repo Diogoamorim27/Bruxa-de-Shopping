@@ -34,7 +34,8 @@ func _input(event):
 #				player.state = 0
 		
 func _on_CameraObstacle_body_entered(body):
-	_start_obstacle_dialogue("camera_fov", body)
+	if player.state != 1:
+		_start_obstacle_dialogue("camera_fov", body)
 		
 func _on_PuddleObstacle_body_entered(body):
 	if body.name == "Player":
