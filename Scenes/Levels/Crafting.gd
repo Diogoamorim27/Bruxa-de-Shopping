@@ -34,10 +34,10 @@ func _on_Button_pressed():
 		print(_check_ingredients())
 		print(spell_indexes[_check_ingredients()])
 		
-		while !crafting_items.items.empty():
-			for item in crafting_items.items:
-				crafting_items.remove_item(item)
-				item.queue_free()
+#		while !crafting_items.items.empty():
+#			for item in crafting_items.items:
+#				crafting_items.remove_item(item)
+#				item.queue_free()
 					
 func _check_ingredients():
 	for spell in SpellRecipes.SPELLS.keys():
