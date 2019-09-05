@@ -30,49 +30,40 @@ func _process(delta):
 			if Input.is_action_just_pressed("numkey_1"):
 				enter_state(states.INVISIBLE)
 			if Input.is_action_just_pressed("numkey_2"):
-				timer_ready = false
-				timer.start()
-				state = states.GOO
+				enter_state(states.GOO)
 			if Input.is_action_just_pressed("numkey_3"):
-				timer_ready = false
-				timer.start()
-				state = states.FLOATING
+				enter_state(states.FLOATING)
 			
 			
 			
 		states.INVISIBLE:
 			_update_movement(input, delta)
-			self.collision_layer = 2
-			self.collision_mask = 2
+#			self.collision_layer = 2
+#			self.collision_mask = 2
 
 			# POWER OVER #
 			if timer_ready == true:
-				opacity_animator.play_backwards("GoInvisible")
-				state = states.DEFAULT
-				self.collision_layer = 1
-				self.collision_mask = 1
+				pass
 		states.GOO:
 			sprite.modulate = Color(0, 1, 0)
 			_update_movement(input, delta)
-			self.collision_layer = 4
-			self.collision_mask = 4
+#			self.collision_layer = 4
+#			self.collision_mask = 4
 			# POWER OVER #
 			if timer_ready == true:
 				state = states.DEFAULT
 				$icon.modulate = Color(1 ,1, 1)
-				self.collision_layer = 1
-				self.collision_mask = 1
+#				self.collision_layer = 1
+#				self.collision_mask = 1
 		states.FLOATING:
-			sprite.modulate = Color(0, 0, 1)
 			_update_movement(input, delta)
-			self.collision_layer = 8
-			self.collision_mask = 8
+#			self.collision_layer = 8
+#			self.collision_mask = 8
 			# POWER OVER #
 			if timer_ready == true:
-				state = states.DEFAULT
-				$icon.modulate = Color(1 ,1, 1)
-				self.collision_layer = 1
-				self.collision_mask = 1
+				pass
+#				self.collision_layer = 1
+#				self.collision_mask = 1
 		states.INTERACTING:
 			_update_movement(Vector2(),delta)
 			pass
@@ -108,7 +99,27 @@ func _update_movement(input : Vector2, delta : float):
 	
 
 func _on_Timer_timeout():
+	print("timer_timeout")
 	timer_ready = true
+	if state == states.INVISIBLE:
+		print("invisibility over")
+		opacity_animator.play_backwards("GoInvisible")
+		for camera in get_tree().get_nodes_in_group("camera"):
+			camera.collision_layer = 1
+			camera.collision_mask = 1
+		state = states.DEFAULT
+	elif state == states.FLOATING:
+		print("floating_over" )
+		for puddle in get_tree().get_nodes_in_group("puddle"):
+					puddle.collision_layer = 1
+					puddle.collision_mask = 1
+		state = states.DEFAULT
+	elif state == states.GOO:
+		for door in get_tree().get_nodes_in_group("door"):
+			door.collision_layer = 1
+			door.collision_mask = 1
+#		self.collision_layer = 1
+#		self.collision_mask = 1
 	
 
 func _on_Popup_popup_hide():
@@ -137,7 +148,19 @@ func _handle_animation():
 func enter_state(new_state):
 	timer_ready = false
 	timer.start()
+	print("timer_started" )
 	state = new_state
 	if new_state == states.INVISIBLE:
 		opacity_animator.play("GoInvisible")
+		for camera in get_tree().get_nodes_in_group("camera"):
+			camera.collision_layer = 2
+			camera.collision_mask = 2
+	elif new_state == states.FLOATING:
+		for puddle in get_tree().get_nodes_in_group("puddle"):
+			puddle.collision_layer = 2
+			puddle.collision_mask = 2
+	elif new_state == states.GOO:
+		for door in get_tree().get_nodes_in_group("door"):
+			door.collision_layer = 2
+			door.collision_mask = 2
 	

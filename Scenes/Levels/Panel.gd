@@ -31,10 +31,11 @@ func _input(event):
 			else:
 				dialogue_index = 0
 				self.visible = false
-				player.state = 0
+#				player.state = 0
 		
 func _on_CameraObstacle_body_entered(body):
-	_start_obstacle_dialogue("camera_fov", body)
+	if player.state != 1:
+		_start_obstacle_dialogue("camera_fov", body)
 		
 func _on_PuddleObstacle_body_entered(body):
 	if body.name == "Player":
@@ -47,12 +48,20 @@ func _on_DoorObstacle_body_entered(body):
 func _start_obstacle_dialogue(obstacle : String, body : Object):
 		if body.name == "Player":
 				dialogue_index = 0
-				player.state = 4
+#				player.state = 4
 				dialogue_type = OBSTACLE_DIALOG
 				visible = true
 				current_dialogue = TextData.obstacle_dialogues[obstacle]
 				label.text = current_dialogue[0]
 				
+func _start_spell_dialogue(obstacle : String):
+		dialogue_index = 0
+		dialogue_type = OBSTACLE_DIALOG
+		visible = true
+		current_dialogue = TextData.obstacle_dialogues[obstacle]
+		label.text = current_dialogue[0]
+				
+
 func _trashcan_opened():
 	_start_obstacle_dialogue("trashcan_opened", player)
 	
@@ -63,10 +72,20 @@ func _on_CameraDialogTrigger_body_entered(body):
 		cam_triggered = true
 	pass # Replace with function body.
 	
-func _wrong_recipe_dialog():
+func wrong_recipe_dialog():
 	_start_obstacle_dialogue(wrong_recipe_texts[wrong_recipe_index], player)
 	if wrong_recipe_index < 4:
 		wrong_recipe_index += 1
 	else:
 		wrong_recipe_index = 0
 	print("nogo")
+	
+func spell_dialog(spell):
+	if spell == "invisible":
+		_start_spell_dialogue("invisibilidade")
+	elif spell ==  "goo":
+		_start_spell_dialogue("goo")
+	elif spell == "floating":
+		_start_spell_dialogue("levitacao")
+	elif spell == "overpower":
+		_start_spell_dialogue("overpower")

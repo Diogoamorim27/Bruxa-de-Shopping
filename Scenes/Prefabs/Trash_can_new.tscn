@@ -13,6 +13,8 @@ height = 15.3018
 [node name="Trashcan" type="Area2D" groups=[
 "trashcans",
 ]]
+collision_layer = 15
+collision_mask = 15
 script = ExtResource( 1 )
 item_1 = "cola"
 item_2 = "cola"

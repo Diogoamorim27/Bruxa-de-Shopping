@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gdp slots slot 1 1-gdp slots slot 1.ogg-3a9990bb89d5cdebf3a5a883b8efa28f.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/gdp slots slot 1 1-gdp slots slot 1.ogg"
+dest_files=[ "res://.import/gdp slots slot 1 1-gdp slots slot 1.ogg-3a9990bb89d5cdebf3a5a883b8efa28f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

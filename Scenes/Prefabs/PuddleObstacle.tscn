@@ -123,12 +123,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 40, 40 )
 
 [node name="PuddleObstacle" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." groups=[
+"puddle",
+]]
 tile_set = SubResource( 12 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -138,4 +140,4 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 2, 65535, 0, 6, 0, 0, 8 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuddleInteractionArea"]
-shape = SubResource( 14 )
+shape = SubResource( 13 )

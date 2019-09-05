@@ -28,13 +28,14 @@ func _on_Button_pressed():
 #	print(crafting_items.items)
 
 	if _check_ingredients():
-		player.timer_ready = false
-		player.timer.start()
 		player.enter_state(spell_indexes[_check_ingredients()])
 		print(_check_ingredients())
 		print(spell_indexes[_check_ingredients()])
+		get_tree().call_group("dialogue_panel", "spell_dialog", _check_ingredients())
+		$Sucesso.play()
 	else:
-		get_tree().call_group("dialogue_panel", "_wrong_recipe_dialog")
+		get_tree().call_group("dialogue_panel", "wrong_recipe_dialog")
+		$Erro.play()
 		
 #		while !crafting_items.items.empty():
 #			for item in crafting_items.items:

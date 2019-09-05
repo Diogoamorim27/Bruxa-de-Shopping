@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Prefabs/Inventory.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/inv_craft.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Prefabs/TextureRect.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Sprites/new_inv_grid.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Audio/gdp slots slot 1 1-gdp slots slot 1.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/gdp slots slot 1 2-gdp slots slot 2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio/gdp slots slot 1 3-gdp slots slot 3.ogg" type="AudioStream" id=7]
 
 [node name="Inventory" type="Control"]
 margin_right = 40.0
@@ -53,3 +56,12 @@ margin_right = 608.0
 margin_bottom = 552.0
 texture = ExtResource( 4 )
 script = ExtResource( 3 )
+
+[node name="Sound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Sound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Sound3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )

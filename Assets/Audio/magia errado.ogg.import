@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/magia errado.ogg-080c25eb7dc7e55c7c399da3e92232f6.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/magia errado.ogg"
+dest_files=[ "res://.import/magia errado.ogg-080c25eb7dc7e55c7c399da3e92232f6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
