@@ -447,6 +447,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 extents = Vector2( 20, 60 )
 
 [node name="BaseLevel" type="Node2D"]
+editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="Crafting" parent="." instance=ExtResource( 2 )]
@@ -562,10 +563,10 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 [connection signal="pressed" from="CanvasLayer/Control/Inventory/Button" to="Crafting" method="_on_Button_pressed"]
 [connection signal="input_event" from="Trashcans/Trashcan" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
-[connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
-[connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
+[connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
+[connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="body_entered" from="CameraDialogTrigger" to="CanvasLayer/Control/Panel" method="_on_CameraDialogTrigger_body_entered"]
 
 [editable path="CanvasLayer/Control/Panel"]

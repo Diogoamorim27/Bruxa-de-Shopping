@@ -1,7 +1,7 @@
 {
     "wet_floor" : [
         "Piso molhado. Não posso correr o risco de escorregar.",
-        "Eu posso ter 17 anos, mas minha coluna tem 70…"
+        "Eu posso ter 17 anos, mas minha coluna tem 70..."
     ],
 
     "camera_fov" : [
@@ -15,8 +15,8 @@
     ],
 
     "store_entrance" : [
-        "Posso sentir alguma coisa importante aí dentro...",
-        "Talvez se… eu me enfiar por baixo da porta?"
+        "Posso sentir alguma coisa importante aí dentro.",
+        "Talvez se eu... me enfiar por baixo da porta?"
     ],
 
     "trashcan_opened" : ["Lixo. Nunca decepciona. Vejamos..."],
@@ -24,7 +24,7 @@
     "camera_warning" : [
         "Claro, câmeras de segurança.",
         "Não sou muito fotogênica nem... videogênica?",
-        "É melhor ficar invisível.",
+        "Enfim, é melhor ficar invisível.",
         "Devo encontrar os itens necessários no lixo."
     ],
 
@@ -32,7 +32,7 @@
         "Droga! Essa porcaria nunca funciona direito!",
         "Era o endereço da LOJA, e não do shopping inteiro!",
         "Enfim, pelo menos apareci DENTRO do shopping.",
-        "Vamos lá. Loja “Gótica Suave”.",
+        "Vamos lá. Loja GÓTICA SUAVE.",
         "Não pode ser tão difícil."
     ]
 

@@ -8,7 +8,7 @@ onready var sfx_player : = $SFXPlayer
 
 const TEXTO_1  = [
 	"Durante séculos, as Forças do Caos estiveram aprisionadas por um poderoso feitiço... ",
-	"No entanto, no alvorecer do Século 21, uma misteriosa bruxa conseguiu romper a proteção mágica que preservava a própria ordem da realidade…",
+	"No entanto, no alvorecer do Século 21, uma misteriosa bruxa conseguiu romper a proteção mágica que preservava a própria ordem da realidade...",
 	"Era Robertinha, a Bruxa do Caos."
 ]
 
@@ -16,7 +16,7 @@ const TEXTO_2 = [
 	"Na verdade, ela fez isso sem querer.",
 	"Porém, após o despertar de suas habilidades mágicas, tudo que Roberta precisava era de um poderoso elemento cósmico... ",
 	"Um elemento que revelaria a verdadeira extensão de seus poderes...",
-	"Um elemento tão poderoso que só poderia ser encontrado no...",
+	"Algo tão poderoso só poderia ser encontrado no...",
 	"Shopping."
 ]
 
