@@ -4,11 +4,13 @@ onready var player : KinematicBody2D = get_tree().get_nodes_in_group("player")[0
 onready var label : = $Label
 
 enum {ITEM_DESCRIPTION, OBSTACLE_DIALOG}
+const wrong_recipe_texts = ["wrong_recipe1","wrong_recipe2","wrong_recipe3","wrong_recipe4","wrong_recipe5"]
 
 var dialogue_type : int
 var dialogue_index : = 0
 var current_dialogue : Array
 var cam_triggered= false
+var wrong_recipe_index = 0
 
 func _ready():
 	pass # Replace with function body.
@@ -60,3 +62,11 @@ func _on_CameraDialogTrigger_body_entered(body):
 		_start_obstacle_dialogue("camera_warning", player)
 		cam_triggered = true
 	pass # Replace with function body.
+	
+func _wrong_recipe_dialog():
+	_start_obstacle_dialogue(wrong_recipe_texts[wrong_recipe_index], player)
+	if wrong_recipe_index < 4:
+		wrong_recipe_index += 1
+	else:
+		wrong_recipe_index = 0
+	print("nogo")

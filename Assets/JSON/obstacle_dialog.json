@@ -34,7 +34,12 @@
         "Enfim, pelo menos apareci DENTRO do shopping.",
         "Vamos lá. Loja GÓTICA SUAVE.",
         "Não pode ser tão difícil."
-    ]
+    ],
 
+    "wrong_recipe1" : ["Não rolou."],
+    "wrong_recipe2" : ["Não deu em nada."],
+    "wrong_recipe3" : ["Necas de pitibiriba."],
+    "wrong_recipe4" : ["Bulhufas."],
+    "wrong_recipe5" : ["Não me convenceu."]
 
 }

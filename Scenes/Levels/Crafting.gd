@@ -33,6 +33,8 @@ func _on_Button_pressed():
 		player.enter_state(spell_indexes[_check_ingredients()])
 		print(_check_ingredients())
 		print(spell_indexes[_check_ingredients()])
+	else:
+		get_tree().call_group("dialogue_panel", "_wrong_recipe_dialog")
 		
 #		while !crafting_items.items.empty():
 #			for item in crafting_items.items:
