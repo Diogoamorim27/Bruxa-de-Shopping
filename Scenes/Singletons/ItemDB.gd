@@ -56,10 +56,10 @@ const ITEMS = {
 	
 
 const ITEM_DESCRIPTIONS = {
-	"paper" : "Fino e leve. Meio genérico. Serve pra bastante coisa…",
-	"soda" : "Posso sentir um passado gasoso aqui dentro…",
-	"grease": "Delícia! Restos de comida gordurosa com altos níveis de oleosidade.",
-	"transparency" : "Plástico. Transparente. Do tipo que engasga tartarugas.",
+	"paper" : "Papel. Fino e leve. Meio genérico mas pode ser útil.",
+	"soda" : "Lata de refrigerante. Posso sentir um passado gasoso aqui dentro...",
+	"grease": "Delícia! Comida gordurosa com altos níveis de oleosidade. Pode ser útil.",
+	"transparency" : "Plástico transparente, do tipo que engasga tartarugas...",
 	"healthy" : "Não serve. Isso é pra galera fitness."
 	}
 
