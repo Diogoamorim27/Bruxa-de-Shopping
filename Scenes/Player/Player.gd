@@ -22,6 +22,14 @@ func _ready():
 
 func _process(delta):
 	var input : = _get_directional_input()
+	
+	self.z_index = 2
+	
+	for door in get_tree().get_nodes_in_group("door"):
+		
+		if self.global_position.y < door.global_position.y:
+			self.z_index = -1
+	
 	match state:
 		states.DEFAULT:
 			_update_movement(input, delta)
@@ -33,8 +41,7 @@ func _process(delta):
 				enter_state(states.GOO)
 			if Input.is_action_just_pressed("numkey_3"):
 				enter_state(states.FLOATING)
-			
-			
+
 			
 		states.INVISIBLE:
 			_update_movement(input, delta)
