@@ -490,7 +490,6 @@ format = 1
 tile_data = PoolIntArray( -6094863, 3, 0, -6029331, 2, 0, -5570580, 2, 0, -4325374, 4, 0, -4325360, 4, 0, -4325354, 4, 0, -4325336, 4, 0, -4194335, 4, 0, -4194332, 0, 0, -4194320, 0, 0, -4259822, 0, 0, -3997727, 1, 0, -3735583, 4, 0, -3801034, 4, 0, -3670038, 0, 0, -2424831, 4, 0, -2424774, 4, 0, -1900516, 0, 0, -1310719, 1, 0, -1310662, 1, 0, -655347, 4, 0, -655314, 4, 0, -589807, 0, 0, -589785, 0, 0, -327670, 2, 0, 65554, 3, 0, 65575, 3, 0, 1376274, 3, 0, 1376295, 3, 0 )
 
 [node name="Trashcans" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Trashcan" parent="Trashcans" instance=ExtResource( 14 )]
 position = Vector2( 940, 0 )
@@ -587,10 +586,10 @@ environment = SubResource( 30 )
 color = Color( 0.113725, 0.113725, 0.113725, 1 )
 [connection signal="pressed" from="CanvasLayer/Control/Inventory/Button" to="Crafting" method="_on_Button_pressed"]
 [connection signal="input_event" from="Trashcans/Trashcan" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
-[connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
-[connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
+[connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
+[connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
 [connection signal="body_entered" from="CameraDialogTrigger" to="CanvasLayer/Control/Panel" method="_on_CameraDialogTrigger_body_entered"]
 
 [editable path="CanvasLayer/Control/Panel"]
