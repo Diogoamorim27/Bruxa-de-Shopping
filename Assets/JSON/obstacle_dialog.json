@@ -40,6 +40,11 @@
     "wrong_recipe2" : ["Não deu em nada."],
     "wrong_recipe3" : ["Necas de pitibiriba."],
     "wrong_recipe4" : ["Bulhufas."],
-    "wrong_recipe5" : ["Não me convenceu."]
+    "wrong_recipe5" : ["Não me convenceu."],
+
+    "invisibilidade" : ["Pura transparência! Ninguém vai me ver assim."],
+    "levitacao" : ["Livre, leve, solta!","E gasosa..."],
+    "goo" : ["Uma fina camada de...","gordura?",],
+    "overpower" : ["OVERPOWER!!!","Assim que é bom!"]
 
 }
