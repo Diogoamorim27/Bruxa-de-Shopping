@@ -6,6 +6,8 @@ const loot_ui = preload("res://Scenes/Prefabs/LootUI.tscn")
 onready var craft_rect = $CraftTextureRect
 onready var inv_rect = $InvTextureRect
 
+onready var sounds = [$Sound1, $Sound2, $Sound3]
+
 signal item_clicked
 
 var item_held = null
@@ -15,6 +17,7 @@ var last_pos = Vector2()
 var loot_open = false
 var new_loot_rect = null
 var trashcans = []
+var sound_index = 0
 
 
 func _ready():
@@ -64,9 +67,17 @@ func release(cursor_pos):
 	if c == null:
 	    return_item()
 	elif c.has_method("insert_item"):
-	    if c.insert_item(item_held):
-	    	item_held = null
-	    else:
+		if c.insert_item(item_held):
+			if c.name == "CraftTextureRect":
+				sounds[sound_index].play()
+				if sound_index < (sounds.size() - 1):
+					sound_index += 1
+				else:
+					sound_index = 0
+				
+			item_held = null
+			
+		else:
 	    	return_item()
 	else:
 	    return_item()

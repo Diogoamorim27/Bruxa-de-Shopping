@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gdp grab item final.ogg-825c5caaaec9d08c5180a411b8ff3171.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/gdp grab item final.ogg"
+dest_files=[ "res://.import/gdp grab item final.ogg-825c5caaaec9d08c5180a411b8ff3171.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
