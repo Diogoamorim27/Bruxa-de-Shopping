@@ -26,11 +26,13 @@ func _process(delta):
 	if Input.is_action_just_pressed("inv_grab"):
 #		print("inv_grab")
 		grab(cursor_pos)
+		if item_held:
+			emit_signal("item_clicked", item_held.item_category)
 		
 	if Input.is_action_just_released("inv_grab"):
-		if item_held:
-			if item_held.rect_global_position == last_pos:
-				emit_signal("item_clicked", item_held.item_category)
+#		if item_held:
+#			if item_held.rect_global_position == last_pos:
+#				emit_signal("item_clicked", item_held.item_category)
 		release(cursor_pos)
 	
 	
