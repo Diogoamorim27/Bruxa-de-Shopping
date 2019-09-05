@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://Scenes/Levels/BaseLevel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Prefabs/Crafting.tscn" type="PackedScene" id=2]
@@ -6,31 +6,55 @@
 [ext_resource path="res://Scenes/Prefabs/Inventory.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Sprites/chao.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sprites/blacksquare.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Sprites/Walls/PAREDENEW.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Sprites/Walls/paredeoutra.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Sprites/Walls/paredepraça.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Sprites/loja_sheet.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Sprites/Lojas/lojasanglosaxonicas.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Sprites/Lojas/reidalarica.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Sprites/Props/objbanco.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Sprites/Props/objbancolado.png" type="Texture" id=14]
-[ext_resource path="res://Assets/Sprites/Props/objplacacair.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Sprites/Props/objvaso1.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Sprites/Props/vaso2.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Sprites/Props/objmesa.png" type="Texture" id=18]
-[ext_resource path="res://Assets/Sprites/Props/mesapraca3.png" type="Texture" id=19]
-[ext_resource path="res://Assets/Sprites/Props/mesa praca2.png" type="Texture" id=20]
-[ext_resource path="res://Assets/Sprites/Props/mesapraca1.png" type="Texture" id=21]
-[ext_resource path="res://Scenes/Prefabs/Trash_can_new.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Scenes/Prefabs/lixopraca2.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scenes/Prefabs/lixopraca.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Scenes/Prefabs/lixopracalado2.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Scenes/Prefabs/lixopracalado.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Scenes/Prefabs/CameraObstacle.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Assets/Sprites/light_example.png" type="Texture" id=28]
-[ext_resource path="res://Scenes/Prefabs/PuddleObstacle.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Scenes/Prefabs/DoorObstacle.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Assets/Sprites/Chao/PISOBRINQ.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/Chao/piso.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/Chao/chao.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Walls/PAREDENEW.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/Walls/paredeoutra.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/Walls/paredepraça.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sprites/Walls/PAREDEBRINQ.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/Walls/parede_sapato.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/Walls/parede_gotica.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/loja_sheet.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sprites/Lojas/lojasanglosaxonicas.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Sprites/Lojas/reidalarica.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Sprites/Props/objbanco.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Sprites/Props/objbancolado.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Sprites/Props/Brinquedos/prateleiragrande.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Sprites/Props/Brinquedos/posterbrinq.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Sprites/Props/Brinquedos/mesacaixabrinq.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Sprites/Props/Brinquedos/estante.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/bota1.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/bota2.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/cab1.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/cab2.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/corset1.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/corset2.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Sprites/Props/objplacacair.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/gato.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Sprites/Props/Gotica/mesa.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Sprites/Props/Sapatos/bolsas.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Sprites/Props/Sapatos/cxregistradora.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Sprites/Props/Sapatos/prat1.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Sprites/Props/Sapatos/prat2.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Sprites/Props/Sapatos/pratgrande.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Sprites/Props/objvaso1.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Sprites/Props/vaso2.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Sprites/Props/objmesa.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Sprites/Props/mesapraca3.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Sprites/Props/mesa praca2.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Sprites/Props/mesapraca1.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Sprites/Props/Brinquedos/prateleirapequena.png" type="Texture" id=45]
+[ext_resource path="res://Scenes/Prefabs/Trash_can_new.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Scenes/Prefabs/lixopraca2.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Scenes/Prefabs/lixopraca.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Scenes/Prefabs/lixopracalado2.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Scenes/Prefabs/lixopracalado.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Scenes/Prefabs/CameraObstacle.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Assets/Sprites/light_example.png" type="Texture" id=52]
+[ext_resource path="res://Scenes/Prefabs/PuddleObstacle.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Scenes/Prefabs/DoorObstacle.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=55]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -62,6 +86,36 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
+2/name = "PISOBRINQ.png 2"
+2/texture = ExtResource( 7 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "piso.png 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+4/name = "chao.png 4"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [  ]
+4/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
@@ -72,9 +126,18 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
 
+[sub_resource type="ConvexPolygonShape2D" id=39]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=40]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=41]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
+
 [sub_resource type="TileSet" id=6]
 1/name = "PAREDENEW.png 1"
-1/texture = ExtResource( 7 )
+1/texture = ExtResource( 10 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 128 )
@@ -90,7 +153,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
 } ]
 1/z_index = 0
 2/name = "paredeoutra.png 2"
-2/texture = ExtResource( 8 )
+2/texture = ExtResource( 11 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 64, 128 )
@@ -106,7 +169,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
 } ]
 2/z_index = 0
 3/name = "paredepraça.png 3"
-3/texture = ExtResource( 9 )
+3/texture = ExtResource( 12 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 64, 128 )
@@ -121,6 +184,54 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 128, 0, 128 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
+4/name = "PAREDEBRINQ.png 4"
+4/texture = ExtResource( 13 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 64, 128 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 39 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "parede_sapato.png 5"
+5/texture = ExtResource( 14 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 64, 128 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 40 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "parede_gotica.png 6"
+6/texture = ExtResource( 15 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 64, 128 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 41 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
@@ -166,7 +277,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 
 [sub_resource type="TileSet" id=21]
 0/name = "loja_sheet.png 0"
-0/texture = ExtResource( 10 )
+0/texture = ExtResource( 16 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 192, 128 )
@@ -182,7 +293,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 0/z_index = 0
 1/name = "loja_sheet.png 1"
-1/texture = ExtResource( 10 )
+1/texture = ExtResource( 16 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 128, 128, 128 )
@@ -198,7 +309,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 1/z_index = 0
 2/name = "loja_sheet.png 2"
-2/texture = ExtResource( 10 )
+2/texture = ExtResource( 16 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 256, 192, 128 )
@@ -214,7 +325,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 2/z_index = 0
 3/name = "loja_sheet.png 3"
-3/texture = ExtResource( 10 )
+3/texture = ExtResource( 16 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 384, 192, 128 )
@@ -230,7 +341,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 3/z_index = 0
 4/name = "loja_sheet.png 4"
-4/texture = ExtResource( 10 )
+4/texture = ExtResource( 16 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 512, 192, 128 )
@@ -246,7 +357,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 4/z_index = 0
 5/name = "loja_sheet.png 5"
-5/texture = ExtResource( 10 )
+5/texture = ExtResource( 16 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 640, 192, 128 )
@@ -262,7 +373,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 5/z_index = 0
 6/name = "loja_sheet.png 6"
-6/texture = ExtResource( 10 )
+6/texture = ExtResource( 16 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 768, 192, 128 )
@@ -278,7 +389,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 6/z_index = 0
 7/name = "loja_sheet.png 7"
-7/texture = ExtResource( 10 )
+7/texture = ExtResource( 16 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 896, 192, 128 )
@@ -294,7 +405,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 7/z_index = 0
 8/name = "loja_sheet.png 8"
-8/texture = ExtResource( 10 )
+8/texture = ExtResource( 16 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 1024, 192, 128 )
@@ -310,7 +421,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 8/z_index = 0
 9/name = "loja_sheet.png 9"
-9/texture = ExtResource( 10 )
+9/texture = ExtResource( 16 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 1152, 192, 128 )
@@ -326,7 +437,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 9/z_index = 0
 10/name = "loja_sheet.png 10"
-10/texture = ExtResource( 10 )
+10/texture = ExtResource( 16 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 1280, 128, 128 )
@@ -342,7 +453,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 10/z_index = 0
 11/name = "loja_sheet.png 11"
-11/texture = ExtResource( 10 )
+11/texture = ExtResource( 16 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 1408, 192, 128 )
@@ -358,7 +469,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 11/z_index = 0
 12/name = "lojasanglosaxonicas.png 12"
-12/texture = ExtResource( 11 )
+12/texture = ExtResource( 17 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 256, 128 )
@@ -374,7 +485,7 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 128, 0, 128 )
 } ]
 12/z_index = 0
 13/name = "reidalarica.png 13"
-13/texture = ExtResource( 12 )
+13/texture = ExtResource( 18 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 0, 192, 128 )
@@ -402,11 +513,62 @@ points = PoolVector2Array( 0, 0, 33, 0, 33, 64.5617, 0, 65.1001 )
 [sub_resource type="ConvexPolygonShape2D" id=25]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
+[sub_resource type="ConvexPolygonShape2D" id=43]
+points = PoolVector2Array( 0, 0, 65, 0, 65, 81, 0, 81 )
+
+[sub_resource type="ConvexPolygonShape2D" id=44]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=45]
+points = PoolVector2Array( 0, 0, 72, 0, 72, 101, 0, 101 )
+
+[sub_resource type="ConvexPolygonShape2D" id=46]
+points = PoolVector2Array( 0, 0, 68, 0, 68, 94, 0, 94 )
+
+[sub_resource type="ConvexPolygonShape2D" id=47]
+points = PoolVector2Array( 0, 0, 42, 0, 42, 49, 0, 49 )
+
+[sub_resource type="ConvexPolygonShape2D" id=48]
+points = PoolVector2Array( 0, 0, 38, 0, 38, 48, 0, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=49]
+points = PoolVector2Array( 0, 0, 68, 0, 68, 80, 0, 80 )
+
+[sub_resource type="ConvexPolygonShape2D" id=50]
+points = PoolVector2Array( 0, 0, 68, 0, 68, 75, 0, 75 )
+
+[sub_resource type="ConvexPolygonShape2D" id=51]
+points = PoolVector2Array( 0, 0, 34, 0, 34, 79, 0, 79 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 0, 0, 35, 0, 35, 83, 0, 83 )
+
 [sub_resource type="ConvexPolygonShape2D" id=26]
 points = PoolVector2Array( 0, 0, 53, 0, 53, 52, 0, 52 )
 
 [sub_resource type="ConvexPolygonShape2D" id=27]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=53]
+points = PoolVector2Array( 0, 0, 74, 0, 74, 94, 0, 94 )
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
+points = PoolVector2Array( 0, 0, 127, 0, 127, 86, 0, 86 )
+
+[sub_resource type="ConvexPolygonShape2D" id=55]
+points = PoolVector2Array( 0, 0, 57, 0, 57, 51, 0, 51 )
+
+[sub_resource type="ConvexPolygonShape2D" id=56]
+points = PoolVector2Array( 0, 0, 71, 0, 71, 102, 0, 102 )
+
+[sub_resource type="ConvexPolygonShape2D" id=57]
+points = PoolVector2Array( 0, 0, 65, 0, 65, 51, 0, 51 )
+
+[sub_resource type="ConvexPolygonShape2D" id=58]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 51, 0, 51 )
+
+[sub_resource type="ConvexPolygonShape2D" id=59]
+points = PoolVector2Array( 0, 0, 66, 0, 66, 84, 0, 84 )
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
 points = PoolVector2Array( 0, 0, 32, 0, 27.55, 44.8352, 3.32421, 45.1043 )
@@ -432,9 +594,12 @@ points = PoolVector2Array( 32.4204, 0.326019, 31.8622, 23.4898, 44.1418, 24.8852
 [sub_resource type="ConvexPolygonShape2D" id=35]
 points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.701, 7.58215, 77.3525, 6.46582, 77.9107, 53.6306, 1.16327, 53.3515 )
 
+[sub_resource type="ConvexPolygonShape2D" id=42]
+points = PoolVector2Array( 0, 0, 69, 0, 69, 52, 0, 52 )
+
 [sub_resource type="TileSet" id=36]
 0/name = "objbanco.png 0"
-0/texture = ExtResource( 13 )
+0/texture = ExtResource( 19 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 2, 66, 38 )
@@ -456,7 +621,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 0/z_index = 0
 1/name = "objbancolado.png 1"
-1/texture = ExtResource( 14 )
+1/texture = ExtResource( 20 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 64 )
@@ -478,7 +643,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 1/z_index = 0
 2/name = "objplacacair.png 2"
-2/texture = ExtResource( 15 )
+2/texture = ExtResource( 31 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 64, 64 )
@@ -500,7 +665,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 2/z_index = 0
 3/name = "objvaso1.png 3"
-3/texture = ExtResource( 16 )
+3/texture = ExtResource( 39 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 64, 64 )
@@ -522,7 +687,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 3/z_index = 0
 4/name = "vaso2.png 4"
-4/texture = ExtResource( 17 )
+4/texture = ExtResource( 40 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 64, 64 )
@@ -544,7 +709,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 4/z_index = 0
 5/name = "objmesa.png 5"
-5/texture = ExtResource( 18 )
+5/texture = ExtResource( 41 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 64, 64 )
@@ -560,7 +725,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 5/z_index = 0
 6/name = "mesapraca3.png 6"
-6/texture = ExtResource( 19 )
+6/texture = ExtResource( 42 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 63, 77 )
@@ -576,7 +741,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 6/z_index = 0
 7/name = "mesa praca2.png 7"
-7/texture = ExtResource( 20 )
+7/texture = ExtResource( 43 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 64, 128 )
@@ -592,7 +757,7 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 } ]
 7/z_index = 0
 8/name = "mesapraca1.png 8"
-8/texture = ExtResource( 21 )
+8/texture = ExtResource( 44 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( -1, 0, 81, 57 )
@@ -607,6 +772,294 @@ points = PoolVector2Array( 1.44235, 5.62857, 18.7454, 0, 58.6541, 0.326019, 68.7
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
+9/name = "prateleirapequena.png 9"
+9/texture = ExtResource( 45 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( -2, 0, 69, 52 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 42 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "prateleiragrande.png 10"
+10/texture = ExtResource( 21 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 1, 65, 81 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 43 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "posterbrinq.png 11"
+11/texture = ExtResource( 22 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 64, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 44 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
+12/name = "mesacaixabrinq.png 12"
+12/texture = ExtResource( 23 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, -1, 72, 101 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 45 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+13/name = "estante.png 13"
+13/texture = ExtResource( 24 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 68, 94 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 46 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+13/z_index = 0
+14/name = "bota1.png 14"
+14/texture = ExtResource( 25 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( -2, -1, 42, 49 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 47 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+14/z_index = 0
+15/name = "bota2.png 15"
+15/texture = ExtResource( 26 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( -1, 0, 38, 48 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 48 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+15/z_index = 0
+16/name = "cab1.png 16"
+16/texture = ExtResource( 27 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 3, -2, 68, 80 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 49 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+16/z_index = 0
+17/name = "cab2.png 17"
+17/texture = ExtResource( 28 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 1, 0, 68, 75 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 50 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+17/z_index = 0
+18/name = "corset1.png 18"
+18/texture = ExtResource( 29 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( -1, -1, 34, 79 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 51 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+18/z_index = 0
+19/name = "corset2.png 19"
+19/texture = ExtResource( 30 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( -1, -4, 35, 83 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 52 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+19/z_index = 0
+20/name = "gato.png 20"
+20/texture = ExtResource( 32 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, -1, 74, 94 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 53 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+20/z_index = 0
+21/name = "mesa.png 21"
+21/texture = ExtResource( 33 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 127, 86 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 54 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+21/z_index = 0
+22/name = "bolsas.png 22"
+22/texture = ExtResource( 34 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 57, 51 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 55 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+22/z_index = 0
+23/name = "cxregistradora.png 23"
+23/texture = ExtResource( 35 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 1, -1, 71, 102 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 56 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+23/z_index = 0
+24/name = "prat1.png 24"
+24/texture = ExtResource( 36 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 65, 51 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 57 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+24/z_index = 0
+25/name = "prat2.png 25"
+25/texture = ExtResource( 37 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 64, 51 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 58 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+25/z_index = 0
+26/name = "pratgrande.png 26"
+26/texture = ExtResource( 38 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, -1, 66, 84 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 59 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+26/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=37]
 extents = Vector2( 20, 60 )
@@ -659,43 +1112,43 @@ tile_data = PoolIntArray( -6094867, 2, 0, -6094863, 3, 0, -5636117, 2, 0, -43253
 
 [node name="Trashcans" type="Node" parent="."]
 
-[node name="Tcan" parent="Trashcans" instance=ExtResource( 22 )]
+[node name="Tcan" parent="Trashcans" instance=ExtResource( 46 )]
 position = Vector2( 940, 0 )
 item_1 = "garrafa"
 item_2 = "papel1"
 item_3 = "papel2"
 
-[node name="Trashcan2" parent="Trashcans" instance=ExtResource( 22 )]
+[node name="Trashcan2" parent="Trashcans" instance=ExtResource( 46 )]
 position = Vector2( 30, -5 )
 item_1 = "garrafa"
 item_2 = "copo"
 item_3 = "papel1"
 
-[node name="Trashcan3" parent="Trashcans" instance=ExtResource( 22 )]
+[node name="Trashcan3" parent="Trashcans" instance=ExtResource( 46 )]
 position = Vector2( -20, -1460 )
 item_1 = "copo"
 item_2 = "lata1"
 item_3 = "lata2"
 
-[node name="Trashcan" parent="Trashcans" instance=ExtResource( 23 )]
+[node name="Trashcan" parent="Trashcans" instance=ExtResource( 47 )]
 position = Vector2( 300, -40 )
 item_1 = "maca"
 item_2 = "copo"
 item_3 = "papel2"
 
-[node name="Trashcan4" parent="Trashcans" instance=ExtResource( 24 )]
+[node name="Trashcan4" parent="Trashcans" instance=ExtResource( 48 )]
 position = Vector2( 620, -55 )
 item_1 = "burg"
 item_2 = "maca"
 item_3 = "maca"
 
-[node name="Trashcan5" parent="Trashcans" instance=ExtResource( 25 )]
+[node name="Trashcan5" parent="Trashcans" instance=ExtResource( 49 )]
 position = Vector2( 410, -40 )
 item_1 = "lata2"
 item_2 = "burg"
 item_3 = "garrafa"
 
-[node name="Trashcan6" parent="Trashcans" instance=ExtResource( 26 )]
+[node name="Trashcan6" parent="Trashcans" instance=ExtResource( 50 )]
 position = Vector2( 518, -50 )
 item_1 = "copo"
 item_2 = "papel1"
@@ -709,7 +1162,7 @@ position = Vector2( 670, -510 )
 position = Vector2( 0, 10 )
 shape = SubResource( 37 )
 
-[node name="CameraObstacle" parent="." instance=ExtResource( 27 )]
+[node name="CameraObstacle" parent="." instance=ExtResource( 51 )]
 editor/display_folded = true
 position = Vector2( 480, -630 )
 
@@ -736,7 +1189,7 @@ position = Vector2( 20, 40 )
 [node name="Light2D" type="Light2D" parent="CameraObstacle"]
 position = Vector2( -88.9998, -28.9998 )
 scale = Vector2( 0.275391, 0.275391 )
-texture = ExtResource( 28 )
+texture = ExtResource( 52 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -744,21 +1197,21 @@ __meta__ = {
 [node name="Light2D2" type="Light2D" parent="CameraObstacle"]
 position = Vector2( 111, -28.9998 )
 scale = Vector2( 0.275391, 0.275391 )
-texture = ExtResource( 28 )
+texture = ExtResource( 52 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PuddleObstacle" parent="." instance=ExtResource( 29 )]
+[node name="PuddleObstacle" parent="." instance=ExtResource( 53 )]
 position = Vector2( 170, -5 )
 
-[node name="PuddleObstacle2" parent="." instance=ExtResource( 29 )]
+[node name="PuddleObstacle2" parent="." instance=ExtResource( 53 )]
 position = Vector2( 170, -100 )
 
-[node name="DoorObstacle" parent="." instance=ExtResource( 30 )]
+[node name="DoorObstacle" parent="." instance=ExtResource( 54 )]
 position = Vector2( 1260, -1930 )
 
-[node name="Player" parent="." instance=ExtResource( 31 )]
+[node name="Player" parent="." instance=ExtResource( 55 )]
 position = Vector2( 490, 390 )
 z_index = 2
 player_speed = 155
@@ -776,7 +1229,7 @@ editor_draw_drag_margin = true
 [node name="Light2D" type="Light2D" parent="Player"]
 position = Vector2( -3.05176e-005, -30 )
 scale = Vector2( 0.371094, 0.371094 )
-texture = ExtResource( 28 )
+texture = ExtResource( 52 )
 texture_scale = 2.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -787,10 +1240,10 @@ visible = false
 color = Color( 0.113725, 0.113725, 0.113725, 1 )
 [connection signal="pressed" from="CanvasLayer/Control/Inventory/Button" to="Crafting" method="_on_Button_pressed"]
 [connection signal="input_event" from="Trashcans/Tcan" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
-[connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
-[connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
+[connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan2_input_event"]
+[connection signal="input_event" from="Trashcans/Trashcan3" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan4" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan5" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
