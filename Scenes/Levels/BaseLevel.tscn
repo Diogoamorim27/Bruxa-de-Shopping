@@ -1106,7 +1106,7 @@ position = Vector2( 490, 310 )
 tile_set = SubResource( 24 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -5046303, 13, 0, -4718632, 5, 0, -4718614, 7, 0, -4194297, 2, 0, -4194290, 3, 0, -4194276, 8, 0, -3801109, 1, 0, -2949147, 10, 0, -2949133, 9, 0, -2949124, 12, 0, -3014627, 0, 0, -3014619, 4, 0, -2031630, 11, 0, -2097144, 6, 0, -1114115, 8, 0 )
+tile_data = PoolIntArray( -5046303, 13, 0, -4718632, 5, 0, -4718614, 7, 0, -4194297, 2, 0, -4194290, 3, 0, -4194276, 8, 0, -3801109, 1, 0, -2949147, 10, 0, -2949133, 9, 0, -2949124, 12, 0, -3014627, 0, 0, -2031630, 11, 0, -2097144, 6, 0, -1114115, 8, 0 )
 
 [node name="Props" type="TileMap" parent="."]
 tile_set = SubResource( 57 )
@@ -1225,10 +1225,10 @@ position = Vector2( 170, -5 )
 position = Vector2( 170, -100 )
 
 [node name="DoorObstacle" parent="." instance=ExtResource( 56 )]
-position = Vector2( 1260, -1930 )
+position = Vector2( 1772, -1100 )
 
 [node name="Player" parent="." instance=ExtResource( 57 )]
-position = Vector2( 1780, -1192 )
+position = Vector2( 1260, -972 )
 z_index = 2
 player_speed = 155
 
@@ -1252,7 +1252,6 @@ texture_scale = 2.0
 environment = SubResource( 59 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="WorldEnvironment"]
-visible = false
 color = Color( 0.113725, 0.113725, 0.113725, 1 )
 [connection signal="pressed" from="CanvasLayer/Control/Inventory/Button" to="Crafting" method="_on_Button_pressed"]
 [connection signal="input_event" from="Trashcans/Tcan" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
