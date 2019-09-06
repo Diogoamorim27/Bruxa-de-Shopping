@@ -52,14 +52,12 @@ func _process(delta):
 			if timer_ready == true:
 				pass
 		states.GOO:
-			sprite.modulate = Color(0, 1, 0)
 			_update_movement(input, delta)
 #			self.collision_layer = 4
 #			self.collision_mask = 4
 			# POWER OVER #
 			if timer_ready == true:
 				state = states.DEFAULT
-				$icon.modulate = Color(1 ,1, 1)
 #				self.collision_layer = 1
 #				self.collision_mask = 1
 		states.FLOATING:
@@ -116,15 +114,22 @@ func _on_Timer_timeout():
 			camera.collision_mask = 1
 		state = states.DEFAULT
 	elif state == states.FLOATING:
+		$icon.visible = true
+		$Fly.visible =false
 		print("floating_over" )
 		for puddle in get_tree().get_nodes_in_group("puddle"):
 					puddle.collision_layer = 1
 					puddle.collision_mask = 1
 		state = states.DEFAULT
+		_handle_animation()
 	elif state == states.GOO:
 		for door in get_tree().get_nodes_in_group("door"):
 			door.collision_layer = 1
 			door.collision_mask = 1
+		$Goo.visible = false
+		$icon.visible = true
+		state = states.DEFAULT
+		_handle_animation()
 #		self.collision_layer = 1
 #		self.collision_mask = 1
 	
@@ -136,20 +141,29 @@ func _on_Popup_popup_hide():
 func _handle_animation():
 	if round(movement.x) < 0:
 		sprite.flip_h = true
+		$Fly.flip_h = true
 	elif round(movement.x) > 0:
 		sprite.flip_h = false
-
-	if round(movement.x) and animation_player.current_animation != "WalkingSideways":
-		animation_player.play("WalkingSideways")
-	elif round(movement.y) < 0 and animation_player.current_animation != "WalkingUp":
-		animation_player.play("WalkingUp")
-	elif round(movement.y) > 0 and animation_player.current_animation != "WalkingDown":
-		animation_player.play("WalkingDown")
-	elif !round(movement.x) and !round(movement.y) and animation_player.current_animation != "Idle":
-		animation_player.play("Idle")
-#	match state:
-#		states.DEFAULT:
-#
+		$Fly.flip_h = false
+	if state == states.DEFAULT or state == states.INVISIBLE:
+		if round(movement.x) and animation_player.current_animation != "WalkingSideways":
+			animation_player.play("WalkingSideways")
+		elif round(movement.y) < 0 and animation_player.current_animation != "WalkingUp":
+			animation_player.play("WalkingUp")
+		elif round(movement.y) > 0 and animation_player.current_animation != "WalkingDown":
+			animation_player.play("WalkingDown")
+		elif !round(movement.x) and !round(movement.y) and animation_player.current_animation != "Idle":
+			animation_player.play("Idle")
+				
+	elif state == states.FLOATING:
+		if round(movement.x) and animation_player.current_animation != "FlySideways":
+			animation_player.play("FlySideways")
+		elif round(movement.y) < 0 and animation_player.current_animation != "FlyUp":
+			animation_player.play("FlyUp")
+		elif round(movement.y) > 0 and animation_player.current_animation != "FlyDown":
+			animation_player.play("FlyDown")
+		elif !round(movement.x) and !round(movement.y) and animation_player.current_animation != "FlySideways":
+			animation_player.play("FlySideways")
 	pass
 
 func enter_state(new_state):
@@ -166,8 +180,19 @@ func enter_state(new_state):
 		for puddle in get_tree().get_nodes_in_group("puddle"):
 			puddle.collision_layer = 2
 			puddle.collision_mask = 2
+			$icon.visible = false
+			$Goo.visible = false
+			$Fly.visible = true
 	elif new_state == states.GOO:
+		animation_player.play("Melt")
+		$icon.visible = false
+		$Goo.visible = true
 		for door in get_tree().get_nodes_in_group("door"):
 			door.collision_layer = 2
 			door.collision_mask = 2
 	
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "Melt":
+		animation_player.play("Goo")
+	pass # Replace with function body.

@@ -17,6 +17,7 @@ func _process(delta):
 	$AttentionSprite.visible = false
 	for body in get_overlapping_bodies():
 		if body.name == "Player":
+			get_tree().get_root().move_child(body, get_child_count())
 			$AttentionSprite.visible = true
 
 func _on_Trashcan_input_event(viewport, event, shape_idx):

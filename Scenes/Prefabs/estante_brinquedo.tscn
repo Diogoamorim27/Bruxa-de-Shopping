@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Sprites/interrogation mark.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 60.0
+radius = 72.0009
 
 [sub_resource type="CapsuleShape2D" id=2]
 height = 42.1543
@@ -20,13 +20,14 @@ item_1 = "cola"
 item_2 = "cola"
 item_3 = "fries"
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -36 )
+z_as_relative = false
+texture = ExtResource( 2 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -15.6422 )
 shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -36 )
-texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
