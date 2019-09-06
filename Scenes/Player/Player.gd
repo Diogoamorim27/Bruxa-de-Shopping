@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum states {DEFAULT, INVISIBLE, GOO, FLOATING, INTERACTING}# , IDLE}
+enum states {DEFAULT, INVISIBLE, GOO, FLOATING, INTERACTING, OVERPOWER}# , IDLE}
 #const animation_states = { 0 : "Walking", 1 : "Invisible", 2: "Goo", 3 : "Floating", 4 : "Interacting", 5 : "Idle"}
 
 
@@ -41,6 +41,8 @@ func _process(delta):
 				enter_state(states.GOO)
 			if Input.is_action_just_pressed("numkey_3"):
 				enter_state(states.FLOATING)
+			if Input.is_action_just_pressed("numkey_4"):
+				enter_state(states.OVERPOWER)
 
 			
 		states.INVISIBLE:
@@ -72,6 +74,9 @@ func _process(delta):
 		states.INTERACTING:
 			_update_movement(Vector2(),delta)
 			pass
+			
+		states.OVERPOWER:
+			_update_movement(input, delta)
 	
 	_handle_animation()
 	movement  = move_and_slide(movement)
@@ -155,7 +160,7 @@ func _handle_animation():
 		elif !round(movement.x) and !round(movement.y) and animation_player.current_animation != "Idle":
 			animation_player.play("Idle")
 				
-	elif state == states.FLOATING:
+	elif state == states.FLOATING or state == states.OVERPOWER:
 		if round(movement.x) and animation_player.current_animation != "FlySideways":
 			animation_player.play("FlySideways")
 		elif round(movement.y) < 0 and animation_player.current_animation != "FlyUp":
@@ -191,6 +196,25 @@ func enter_state(new_state):
 		for door in get_tree().get_nodes_in_group("door"):
 			door.collision_layer = 2
 			door.collision_mask = 2
+			
+	elif new_state == states.OVERPOWER:
+		$LightOp.visible = true
+		$icon.visible = false
+		$Goo.visible = false
+		$Fly.visible = true
+		
+		for door in get_tree().get_nodes_in_group("door"):
+			door.collision_layer = 2
+			door.collision_mask = 2
+		
+		for puddle in get_tree().get_nodes_in_group("puddle"):
+			puddle.collision_layer = 2
+			puddle.collision_mask = 2
+			
+		for camera in get_tree().get_nodes_in_group("camera"):
+			camera.collision_layer = 2
+			camera.collision_mask = 2
+		
 	
 
 func _on_AnimationPlayer_animation_finished(anim_name):

@@ -89,3 +89,10 @@ func spell_dialog(spell):
 		_start_spell_dialogue("levitacao")
 	elif spell == "overpower":
 		_start_spell_dialogue("overpower")
+
+
+func _on_Bola_de_Cristal_body_entered(body):
+	if player.state != 5:
+		_start_obstacle_dialogue("crystal_ball", body)
+	else: get_tree().change_scene("res://Scenes/Levels/End.tscn")
+	pass # Replace with function body.

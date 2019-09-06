@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/player.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/Player/spritesheetPOCA.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sprites/Player/SPRITESHEETVOANDO.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/light_example.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 4 )
@@ -241,9 +242,6 @@ tracks/0/keys = {
 position = Vector2( 0, 12 )
 z_index = 2
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 player_speed = 150
 accel = 10
 deaccel = 20
@@ -290,5 +288,14 @@ texture = ExtResource( 4 )
 vframes = 4
 hframes = 4
 frame = 6
+
+[node name="LightOp" type="Light2D" parent="."]
+visible = false
+position = Vector2( -2.38419e-007, -24 )
+scale = Vector2( 0.0830078, 0.0830078 )
+texture = ExtResource( 5 )
+texture_scale = 4.0
+color = Color( 0, 0.054902, 0.87451, 1 )
+energy = 3.0
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
