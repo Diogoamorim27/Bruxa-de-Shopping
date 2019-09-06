@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Prefabs/Trash_can_new.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/Lojas/estante.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Props/Brinquedos/prateleiragrande.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/interrogation mark.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 72.0009
+radius = 90.1767
 
 [sub_resource type="CapsuleShape2D" id=2]
 height = 42.1543
 
-[node name="estante_brinquedo" type="Area2D" groups=[
+[node name="estante_tv" type="Area2D" groups=[
 "trashcans",
 ]]
 collision_layer = 15
@@ -20,14 +20,13 @@ item_1 = "cola"
 item_2 = "cola"
 item_3 = "fries"
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -36 )
-z_as_relative = false
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -15.6422 )
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -20 )
+texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

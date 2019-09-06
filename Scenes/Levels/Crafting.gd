@@ -6,7 +6,7 @@ onready var crafting_items = get_tree().get_nodes_in_group("craft_rect")[0]
 onready var player = get_tree().get_nodes_in_group("player")[0]
 
 var current_items = {}
-var spell_indexes = {"invisible" : 1, "goo" : 2, "floating" : 3}
+var spell_indexes = {"invisible" : 1, "goo" : 2, "floating" : 3, "overpower" : 0}
 
 # warning-ignore:unused_argument
 func _process(delta):

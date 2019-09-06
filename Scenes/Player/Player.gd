@@ -23,12 +23,12 @@ func _ready():
 func _process(delta):
 	var input : = _get_directional_input()
 	
-	self.z_index = 2
-	
-	for door in get_tree().get_nodes_in_group("door"):
-		
-		if self.global_position.y < door.global_position.y:
-			self.z_index = -1
+#	self.z_index = 2
+#
+#	for door in get_tree().get_nodes_in_group("door"):
+#
+#		if self.global_position.y < door.global_position.y:
+#			self.z_index = -1
 	
 	match state:
 		states.DEFAULT:
@@ -167,6 +167,7 @@ func _handle_animation():
 	pass
 
 func enter_state(new_state):
+	_handle_animation()
 	timer_ready = false
 	timer.start()
 	print("timer_started" )
