@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=2]
+[gd_scene load_steps=124 format=2]
 
 [ext_resource path="res://Scenes/Levels/BaseLevel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Prefabs/Crafting.tscn" type="PackedScene" id=2]
@@ -61,6 +61,7 @@
 [ext_resource path="res://Assets/Sprites/Lojas/gotikasuave.png" type="Texture" id=59]
 [ext_resource path="res://Assets/Sprites/Lojas/ope.png" type="Texture" id=60]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=61]
+[ext_resource path="res://Assets/Audio/bruxinha gameplay final.ogg" type="AudioStream" id=62]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1073,10 +1074,10 @@ extents = Vector2( 10, 40 )
 [sub_resource type="RectangleShape2D" id=59]
 extents = Vector2( 20, 60 )
 
-[sub_resource type="CircleShape2D" id=61]
+[sub_resource type="CircleShape2D" id=60]
 radius = 88.8144
 
-[sub_resource type="Environment" id=60]
+[sub_resource type="Environment" id=61]
 
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource( 1 )
@@ -1284,7 +1285,7 @@ texture = ExtResource( 60 )
 position = Vector2( 1300, -2406 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bola de Cristal"]
-shape = SubResource( 61 )
+shape = SubResource( 60 )
 
 [node name="Light2D" type="Light2D" parent="Bola de Cristal"]
 scale = Vector2( 0.126953, 0.126953 )
@@ -1293,7 +1294,7 @@ color = Color( 0.0470588, 0.0156863, 1, 1 )
 energy = 2.0
 
 [node name="Player" parent="." instance=ExtResource( 61 )]
-position = Vector2( 1292, -1838 )
+position = Vector2( 488, 370 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2( 0, -60 )
@@ -1312,10 +1313,14 @@ texture = ExtResource( 55 )
 texture_scale = 2.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 60 )
+environment = SubResource( 61 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="WorldEnvironment"]
 color = Color( 0.113725, 0.113725, 0.113725, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 62 )
+autoplay = true
 [connection signal="pressed" from="CanvasLayer/Control/Inventory/Button" to="Crafting" method="_on_Button_pressed"]
 [connection signal="input_event" from="Trashcans/Tcan" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]
 [connection signal="input_event" from="Trashcans/Trashcan2" to="CanvasLayer/Control/Inventory" method="_on_Trashcan_input_event"]

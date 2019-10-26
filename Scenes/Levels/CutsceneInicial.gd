@@ -34,9 +34,12 @@ func _process(delta):
 		label.text = current_text[dialogue_index]
 	else:
 		if current_text == TEXTO_1:
+#			$AnimationPlayer.play_backwards("FadeOut")
 			char_rect.visible = true
 		elif current_text == TEXTO_2:
-			music_player.stop()
+			music_player.volume_db = lerp(music_player.volume_db, -25, 1)
+			if music_player.volume_db <= -24:
+				music_player.stop()
 		label.visible = false
 #	pass
 
@@ -58,6 +61,7 @@ func _on_CutsceneInicial_gui_input(event):
 func _on_AnimationPlayer_animation_finished(anim_name):
 		dialogue_index = 0
 		current_text = TEXTO_2
+	
 		label.visible = true
 	
 

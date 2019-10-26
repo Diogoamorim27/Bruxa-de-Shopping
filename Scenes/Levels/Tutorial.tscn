@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Levels/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/UI/jogar.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/UI/hoverjogar.png" type="Texture" id=3]
 
 [node name="Tutorial" type="Control"]
 anchor_right = 1.0
@@ -28,10 +30,13 @@ Boa bruxaria!
 align = 1
 autowrap = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 margin_left = 450.0
 margin_top = 510.0
 margin_right = 610.0
 margin_bottom = 530.0
-text = "jogar"
+rect_scale = Vector2( 2, 2 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

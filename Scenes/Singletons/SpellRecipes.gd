@@ -6,10 +6,10 @@ const SPELLS = {
 	},
 	"goo" : {
 		"grease" : 2,
-		"soda" : 1
+		"paper" : 1
 	},
 	"floating" : {
-		"lightness" : 1,
+		"paper" : 1,
 		"soda" : 2
 	},
 	"overpower" : {

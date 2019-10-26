@@ -23,6 +23,7 @@ func _ready():
 func _process(delta):
 	var input : = _get_directional_input()
 	
+	
 #	self.z_index = 2
 #
 #	for door in get_tree().get_nodes_in_group("door"):
@@ -79,7 +80,8 @@ func _process(delta):
 			_update_movement(input, delta)
 	
 	_handle_animation()
-	movement  = move_and_slide(movement)
+	if !get_tree().get_nodes_in_group("dialogue_panel")[0].visible:
+		movement  = move_and_slide(movement)
 	pass
 
 func _get_directional_input() -> Vector2:

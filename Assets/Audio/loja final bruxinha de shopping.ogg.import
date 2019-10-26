@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/loja final bruxinha de shopping.ogg-ebcec595ab531cb1effa761a49b5b509.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/loja final bruxinha de shopping.ogg"
+dest_files=[ "res://.import/loja final bruxinha de shopping.ogg-ebcec595ab531cb1effa761a49b5b509.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

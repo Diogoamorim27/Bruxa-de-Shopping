@@ -1,35 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Prefabs/Inventory.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/inv_craft.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Prefabs/TextureRect.gd" type="Script" id=3]
-[ext_resource path="res://Assets/Sprites/new_inv_grid.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Audio/gdp slots slot 1 1-gdp slots slot 1.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Assets/Audio/gdp slots slot 1 2-gdp slots slot 2.ogg" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Audio/gdp slots slot 1 3-gdp slots slot 3.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Sprites/UI/botao.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/UI/magia.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Prefabs/TextureRect.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Sprites/UI/inventario.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Audio/gdp slots slot 1 1-gdp slots slot 1.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio/gdp slots slot 1 2-gdp slots slot 2.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/gdp slots slot 1 3-gdp slots slot 3.ogg" type="AudioStream" id=8]
 
 [node name="Inventory" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 640.0
-margin_top = 464.0
-margin_right = 752.0
-margin_bottom = 574.0
-
-[node name="Button" type="Button" parent="."]
-margin_left = 662.0
+[node name="Button" type="TextureButton" parent="."]
+margin_left = 656.0
 margin_top = 480.0
-margin_right = 730.0
-margin_bottom = 556.0
-
-[node name="CraftingBase" type="Panel" parent="."]
-margin_left = 768.0
-margin_top = 464.0
-margin_right = 992.0
-margin_bottom = 576.0
+margin_right = 738.0
+margin_bottom = 562.0
+texture_normal = ExtResource( 2 )
 
 [node name="CraftTextureRect" type="TextureRect" parent="." groups=[
 "craft_rect",
@@ -39,14 +29,8 @@ margin_left = 784.0
 margin_top = 488.0
 margin_right = 976.0
 margin_bottom = 552.0
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
-
-[node name="InventoryBase" type="Panel" parent="."]
-margin_left = 16.0
-margin_top = 464.0
-margin_right = 624.0
-margin_bottom = 576.0
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="InvTextureRect" type="TextureRect" parent="."]
 self_modulate = Color( 0.329412, 0.329412, 0.329412, 1 )
@@ -54,14 +38,14 @@ margin_left = 32.0
 margin_top = 488.0
 margin_right = 608.0
 margin_bottom = 552.0
-texture = ExtResource( 4 )
-script = ExtResource( 3 )
+texture = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [node name="Sound1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-
-[node name="Sound2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 
-[node name="Sound3" type="AudioStreamPlayer" parent="."]
+[node name="Sound2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+
+[node name="Sound3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
